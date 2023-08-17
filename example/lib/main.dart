@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mwidgets/setup.dart';
+import 'package:mwidgets/mwidgets.dart';
 
 void main() {
   MWidgetsSetUp.settings(
@@ -91,7 +91,7 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
+        title: MText(text: widget.title),
       ),
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
@@ -112,12 +112,12 @@ class _MyHomePageState extends State<MyHomePage> {
           // wireframe for each widget.
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
+            MText(
+              text: 'You have pushed the button this many times:',
             ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
+            MText(
+              text: '$_counter',
+              size: FoontSize.font16,
             ),
           ],
         ),
@@ -125,7 +125,11 @@ class _MyHomePageState extends State<MyHomePage> {
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
-        child: const Icon(Icons.add),
+        child: const MSvg(
+          name: "",
+          width: 30.0,
+          height: 30.0,
+        ),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
