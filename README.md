@@ -274,6 +274,17 @@ others
      ),     
 ```
 
+### ImagesViewerScreen
+
+```dart 
+    context.push(
+      ImagesViewerScreen(
+        urls: images,
+        initialImage: initialImage,
+      ),
+    );   
+```
+
 ### FToast
 
 ```dart 
