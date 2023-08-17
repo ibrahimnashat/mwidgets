@@ -441,6 +441,13 @@ others
 
 ```
 
+### kPrint()
+
+```dart 
+    kPrint("Hello World");
+
+```
+
 #### License
 
 This library is distributed under Apache 2.0 license for more info see [LICENSE DETAILS](./LICENSE)
