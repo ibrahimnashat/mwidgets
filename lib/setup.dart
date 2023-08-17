@@ -11,6 +11,6 @@ class MWidgetsSetUp {
     Color? secondPrimary,
   }) {
     Coolors.setUp(primary: primary, secondPrimary: secondPrimary);
-    FoontFamily.setUp(en: fontEn, ar: fontAr);
+    FoontFamily.setUp(fontEn: fontEn, fontAr: fontAr);
   }
 }

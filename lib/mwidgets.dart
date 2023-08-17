@@ -2,6 +2,7 @@ library mwidgets;
 
 export 'package:mwidgets/setup.dart';
 
+export 'src/consts/colors.dart';
 export 'src/consts/date_time.dart';
 export 'src/consts/failure.dart';
 export 'src/consts/fold.dart';
