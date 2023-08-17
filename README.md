@@ -393,6 +393,10 @@ others
 ```dart 
  final height = context.mHeight;
  final width = context.mWidth;
+ final orientation = context.mOrientation;
+ final canPop = context.canPop;
+ final maybePop = context.maybePop;
+ final tr = context.tr;
  
  context.push(
   ProductDetailsScreen(
