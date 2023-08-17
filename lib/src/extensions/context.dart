@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+// import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 extension OnContext on BuildContext {
   TextTheme get textTheme => Theme.of(this).textTheme;
@@ -84,7 +84,7 @@ extension OnContext on BuildContext {
 
   double get textMaxWidth => 450;
 
-  AppLocalizations get tr => AppLocalizations.of(this)!;
+  // AppLocalizations get tr => AppLocalizations.of(this)!;
 }
 
 abstract class MainContext {
@@ -115,7 +115,7 @@ abstract class MainContext {
 
   double get textMaxWidth => 450;
 
-  AppLocalizations get tr;
+  // AppLocalizations get tr;
 }
 
 class Root implements MainContext {
@@ -179,6 +179,6 @@ class Root implements MainContext {
   @override
   double get textMaxWidth => 450;
 
-  @override
-  AppLocalizations get tr => AppLocalizations.of(context)!;
+  // @override
+  // AppLocalizations get tr => AppLocalizations.of(context)!;
 }

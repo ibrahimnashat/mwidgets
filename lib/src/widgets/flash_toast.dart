@@ -9,11 +9,12 @@ import 'package:mwidgets/src/widgets/text.dart';
 class FToast {
   static void showError({
     required BuildContext context,
+    required String title,
     required String message,
   }) {
     _showCustomToast(
       context: context,
-      title: context.tr.error,
+      title: title,
       content: message,
       boxColor: Coolors.red,
     );
@@ -21,12 +22,13 @@ class FToast {
 
   static void showSuccess({
     required BuildContext context,
-    required String content,
+    required String title,
+    required String message,
   }) {
     _showCustomToast(
       context: context,
-      title: context.tr.success,
-      content: content,
+      title: title,
+      content: message,
       boxColor: Coolors.primaryColor,
     );
   }
