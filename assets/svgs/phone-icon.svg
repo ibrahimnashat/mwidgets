@@ -1,0 +1,7 @@
+<svg id="vuesax_twotone_speaker" data-name="vuesax/twotone/speaker" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <g id="speaker">
+        <path id="Vector" d="M4,0h6c3,0,4,1,4,4V16c0,3-1,4-4,4H4c-3,0-4-1-4-4V4C0,1,1,0,4,0Z" transform="translate(5 2)" fill="none" stroke="#030327" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+        <path id="Vector-2" data-name="Vector" d="M.455.228A.228.228,0,1,0,.228.455.228.228,0,0,0,.455.228Z" transform="translate(11.772 18.272)" fill="none" stroke="#030327" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" opacity="0.4"/>
+        <path id="Vector-3" data-name="Vector" d="M0,24H24V0H0Z" fill="none" opacity="0"/>
+    </g>
+</svg>
