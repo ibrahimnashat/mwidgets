@@ -4,7 +4,7 @@ export 'src/consts/date_time.dart';
 export 'src/consts/failure.dart';
 export 'src/consts/fold.dart';
 export 'src/consts/font_sizes.dart';
-export 'src/consts/print.dart';
+export 'src/consts/kprint.dart';
 export 'src/consts/strings.dart';
 export 'src/consts/validation.dart';
 export 'src/extensions/context.dart';

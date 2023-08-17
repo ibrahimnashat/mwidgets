@@ -43,6 +43,7 @@ class MTextFiled extends StatelessWidget {
   final String? Function(String? valid)? validator;
 
   MTextFiled({
+    super.key,
     this.mKey,
     this.textAlign = TextAlign.start,
     this.validator,

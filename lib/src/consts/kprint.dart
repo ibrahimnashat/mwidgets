@@ -16,10 +16,6 @@ void kPrint(dynamic data) {
 }
 
 void _pr(String data) {
-  if (data.length > 500) {
-    log(data);
-  } else {
-    print(data);
-  }
+  log(data);
   log(StackTrace.current.toString().split('\n')[2]);
 }

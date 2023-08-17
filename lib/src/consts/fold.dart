@@ -1,6 +1,6 @@
 import 'package:eitherx/eitherx.dart';
 import 'package:mwidgets/src/consts/failure.dart';
-import 'package:mwidgets/src/consts/print.dart';
+import 'package:mwidgets/src/consts/kprint.dart';
 
 extension OnEither<T> on Either<Failure, T> {
   dynamic right(Function(T data) callBack) {
