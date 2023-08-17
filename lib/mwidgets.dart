@@ -1,9 +1,6 @@
 library mwidgets;
 
-import 'package:flutter/material.dart';
-import 'package:mwidgets/src/consts/font_families.dart';
-
-import 'src/consts/colors.dart';
+export 'package:mwidgets/setup.dart';
 
 export 'src/consts/date_time.dart';
 export 'src/consts/failure.dart';
@@ -33,15 +30,3 @@ export 'src/widgets/scrolling.dart';
 export 'src/widgets/text.dart';
 export 'src/widgets/text_filed.dart';
 export 'src/widgets/viewer/images_viewer_screen.dart';
-
-class MWidgetsSetUp {
-  void settings({
-    required String fontEn,
-    required String fontAr,
-    Color? primary,
-    Color? secondPrimary,
-  }) {
-    Coolors.setUp(primary: primary, secondPrimary: secondPrimary);
-    FoontFamily.setUp(en: fontEn, ar: fontAr);
-  }
-}

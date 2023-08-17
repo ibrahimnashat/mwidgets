@@ -1,6 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:mwidgets/setup.dart';
 
 void main() {
+  MWidgetsSetUp.settings(
+    fontEn: "",
+    fontAr: "",
+    primary: Colors.black,
+    secondPrimary: Colors.white,
+  );
   runApp(const MyApp());
 }
 

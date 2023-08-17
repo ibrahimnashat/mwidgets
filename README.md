@@ -4,6 +4,26 @@ Contains a custom widgets like MText, MDropdown, MFileImage, MNetworkImage, MLot
 MBouncingButton, MRating, MPinPut, MScroll, MTextFiled, MRangeItemWidget, MRadioItemWidget and
 others
 
+## SetUp
+
+### MWidgetSetUp
+
+```dart 
+import 'package:flutter/material.dart';
+import 'package:mwidgets/setup.dart';
+
+void main() {
+  MWidgetsSetUp.settings(
+    fontEn: "",
+    fontAr: "",
+    primary: Colors.black,
+    secondPrimary: Colors.white,
+  );
+  runApp(const MyApp());
+}
+
+```
+
 ## Examples
 
 ### MText
@@ -396,7 +416,6 @@ others
  final orientation = context.mOrientation;
  final canPop = context.canPop;
  final maybePop = context.maybePop;
- final tr = context.tr;
  
  context.push(
   ProductDetailsScreen(
