@@ -441,7 +441,7 @@ others
 
 ```
 
-### kPrint()
+### kPrint
 
 ```dart 
     kPrint("Hello World");
