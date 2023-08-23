@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:injectable/injectable.dart';
 // import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 extension OnContext on BuildContext {
@@ -118,6 +119,7 @@ abstract class MainContext {
   // AppLocalizations get tr;
 }
 
+@injectable
 class Root implements MainContext {
   Root({required this.nav});
 
