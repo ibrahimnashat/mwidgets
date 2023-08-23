@@ -1,7 +1,7 @@
 name: mwidgets
 description: Contains a custom widgets like MText, MDropdown, MFileImage, MNetworkImage, MLottie, MSvg,
   MBouncingButton others
-version: 0.0.8
+version: 0.0.9
 homepage: https://github.com/ibrahimnashat/mwidgets.git
 
 environment:
@@ -35,6 +35,9 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0
+  json_serializable: ^6.7.1
+  injectable_generator: ^2.1.6
+  build_runner: ^2.4.6
 
 
 flutter:
