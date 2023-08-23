@@ -119,7 +119,7 @@ abstract class MainContext {
   // AppLocalizations get tr;
 }
 
-@injectable
+@Injectable(as: MainContext)
 class Root implements MainContext {
   Root({required this.nav});
 
