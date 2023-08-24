@@ -158,8 +158,7 @@ class MTextFiled extends StatelessWidget {
                   filled: fillColor != null,
                   fillColor: fillColor,
                   hintText: hintText,
-                  labelText:
-                      hintText == null || hintText == '' ? lableText : null,
+                  labelText: lableText,
                   hintStyle: TextStyle(
                     fontSize: textSize - 2,
                     color: hintColor,
