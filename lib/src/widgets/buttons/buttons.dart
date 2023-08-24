@@ -153,11 +153,12 @@ class MIconButton extends StatelessWidget {
 
 class MBackButton extends StatelessWidget {
   final Function? onBack;
-  final Color backgroundColor;
+  final Color backgroundColor, iconColor;
 
   const MBackButton({
     super.key,
     this.onBack,
+    this.iconColor = Colors.black,
     this.backgroundColor = const Color(0xff92278F),
   });
 
@@ -175,7 +176,7 @@ class MBackButton extends StatelessWidget {
         ),
         child: Icon(
           CupertinoIcons.back,
-          color: Coolors.primaryColor,
+          color: iconColor,
         ),
       ).addAction(onGesture: () {
         if (onBack == null) {
