@@ -30,4 +30,5 @@ export 'src/widgets/rating.dart';
 export 'src/widgets/scrolling.dart';
 export 'src/widgets/text.dart';
 export 'src/widgets/text_filed.dart';
+export 'src/widgets/title_divider_item_widget.dart';
 export 'src/widgets/viewer/images_viewer_screen.dart';
