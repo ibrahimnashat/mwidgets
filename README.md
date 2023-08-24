@@ -238,6 +238,13 @@ void main() {
     const MDividerItemWidget(),
 
 ```
+### MTitleDividerItemWidget
+
+```dart 
+
+    const MTitleDividerItemWidget(title: "OR")
+
+```
 
 ### MRatingItem
 
