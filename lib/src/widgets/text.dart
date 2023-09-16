@@ -50,7 +50,7 @@ class MText extends StatelessWidget {
           decorationStyle: TextDecorationStyle.solid,
           decorationThickness: 1.4,
           height: 1.3,
-          fontWeight: weight ?? FontWeight.w400,
+          fontWeight: weight ?? FontWeight.w300,
         ),
         maxLines: maxLines,
         overflow: TextOverflow.ellipsis,

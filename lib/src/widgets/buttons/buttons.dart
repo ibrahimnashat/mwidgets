@@ -154,11 +154,13 @@ class MIconButton extends StatelessWidget {
 class MBackButton extends StatelessWidget {
   final Function? onBack;
   final Color backgroundColor, iconColor;
+  final double size;
 
   const MBackButton({
     super.key,
     this.onBack,
     this.iconColor = Colors.black,
+    this.size = 55,
     this.backgroundColor = const Color(0xff92278F),
   });
 
@@ -167,8 +169,8 @@ class MBackButton extends StatelessWidget {
     return Align(
       alignment: AlignmentDirectional.topStart,
       child: Container(
-        width: 55,
-        height: 55,
+        width: size,
+        height: size,
         alignment: Alignment.center,
         decoration: BoxDecoration(
           color: backgroundColor.withOpacity(0.1),

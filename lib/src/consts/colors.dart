@@ -7,6 +7,7 @@ class Coolors {
   static const Color white = Color(0xffffffff);
   static const Color black = Color(0xff000000);
   static const Color highLight = Color(0xffEFEFEF);
+  static Color get highlight2 => Colors.grey.withOpacity(0.5);
   static const Color transparent = Colors.transparent;
   static const Color highLightAccent = Color(0xffF7F7F7);
   static const Color grey = Color(0xFF9A9A9A);

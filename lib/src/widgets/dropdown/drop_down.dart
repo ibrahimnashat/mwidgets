@@ -127,13 +127,18 @@ class MDropDown<T> extends StatelessWidget {
                           )
                         ],
                       ).addPadding(start: removeBorder ? 12.0 : 0.0),
-                hint: MText(
-                  fontFamily: FoontFamily.enFont,
-                  text: hint,
-                  color: hintColor ?? Coolors.borderColor,
-                  size: textSize,
-                  align: isCenter ? TextAlign.center : TextAlign.start,
-                ).addPadding(bottom: removeBorder ? 0 : 21.0),
+                hint: Row(
+                  children: [
+                    if (perfix != null) perfix!(item),
+                    MText(
+                      fontFamily: FoontFamily.enFont,
+                      text: hint,
+                      color: hintColor ?? Coolors.borderColor,
+                      size: textSize,
+                      align: isCenter ? TextAlign.center : TextAlign.start,
+                    ).addPadding(bottom: removeBorder ? 0 : 21.0),
+                  ],
+                ),
                 value: item,
                 onChanged: (value) {
                   onChanged(value);
