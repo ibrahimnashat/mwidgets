@@ -85,6 +85,12 @@ extension OnContext on BuildContext {
 
   double get textMaxWidth => 450;
 
+  bool get isEn => Localizations.localeOf(this).languageCode == 'en';
+
+  bool get isAr => Localizations.localeOf(this).languageCode == 'ar';
+
+  String get lng => Localizations.localeOf(this).languageCode;
+
   // AppLocalizations get tr => AppLocalizations.of(this)!;
 }
 

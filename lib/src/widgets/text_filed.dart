@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:mwidgets/src/consts/colors.dart';
 import 'package:mwidgets/src/consts/font_families.dart';
+import 'package:mwidgets/src/extensions/context.dart';
 import 'package:mwidgets/src/extensions/padding.dart';
 import 'package:mwidgets/src/extensions/widget.dart';
 import 'package:mwidgets/src/widgets/text.dart';
@@ -79,7 +80,7 @@ class MTextFiled extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     inputFiltering ??= [];
-    fontFamily ??= FoontFamily.enFont;
+    fontFamily ??= context.isEn ? FoontFamily.enFont : FoontFamily.arFont;
     activeBorderColor ??= Coolors.primaryColor;
     if (hintText == 'null') hintText = null;
     border ??= OutlineInputBorder(
