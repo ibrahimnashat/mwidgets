@@ -3,19 +3,14 @@
 import 'package:bouncing_widget/bouncing_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:mwidgets/injection/injectable.dart';
 import 'package:mwidgets/src/consts/colors.dart';
 import 'package:mwidgets/src/consts/font_sizes.dart';
-import 'package:mwidgets/src/consts/states.dart';
 import 'package:mwidgets/src/extensions/context.dart';
 import 'package:mwidgets/src/extensions/padding.dart';
 import 'package:mwidgets/src/extensions/widget.dart';
 import 'package:mwidgets/src/widgets/image.dart';
 import 'package:mwidgets/src/widgets/text.dart';
 import 'package:square_percent_indicater/square_percent_indicater.dart';
-
-import 'buttons_cubit.dart';
 
 class MBouncingButton extends StatelessWidget {
   final String? title;
@@ -311,36 +306,68 @@ class MAnimatedButton extends StatefulWidget {
 
 class _MAnimatedButtonState extends State<MAnimatedButton>
     with TickerProviderStateMixin {
-  late final cubit = getIt<ButtonsCubit>()..init(this, width: 200.0);
+  late final AnimationController controller = AnimationController(
+    vsync: this,
+    duration: const Duration(milliseconds: 500),
+  );
+  late final AnimationController controllerScale = AnimationController(
+    vsync: this,
+    duration: const Duration(milliseconds: 400),
+  );
+  Animation<double>? tweenButton;
+  double width = 200.0;
+
+  @override
+  void initState() {
+    tweenButton = Tween<double>(begin: width, end: 35.0).animate(controller);
+    super.initState();
+  }
+
+  void done() async {
+    final scaleWidth = width * 1.1;
+    tweenButton =
+        Tween<double>(begin: width, end: scaleWidth).animate(controllerScale)
+          ..addListener(() {
+            setState(() {});
+          });
+    await controllerScale.forward();
+    tweenButton = Tween<double>(begin: scaleWidth, end: 30).animate(controller)
+      ..addListener(() {
+        setState(() {});
+      });
+    await controller.forward();
+  }
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => cubit,
-      child: BlocBuilder<ButtonsCubit, ProcessState>(
-        builder: (context, state) {
-          final width = cubit.tweenButton!.value;
-          return SizedBox(
-            height: 60.0,
-            child: Row(
-              children: [
-                if (width <= 70.0) widget.success,
-                if (width > 35.0)
-                  MBouncingButton(
-                    mKey: widget.mKey,
-                    willAnimated: width < 110,
-                    title: widget.title,
-                    onTap: () async {
-                      await widget.onTap();
-                      cubit.done();
-                    },
-                    width: width,
-                  ),
-              ],
+    final width = tweenButton!.value;
+    return SizedBox(
+      height: 60.0,
+      child: Row(
+        children: [
+          if (width <= 70.0) widget.success,
+          if (width > 35.0)
+            MBouncingButton(
+              mKey: widget.mKey,
+              willAnimated: width < 110,
+              title: widget.title,
+              onTap: () async {
+                await widget.onTap();
+                done();
+              },
+              width: width,
             ),
-          );
-        },
+        ],
       ),
     );
+  }
+
+  @override
+  void dispose() {
+    controllerScale.removeListener(() {});
+    controller.removeListener(() {});
+    controllerScale.dispose();
+    controller.dispose();
+    super.dispose();
   }
 }
