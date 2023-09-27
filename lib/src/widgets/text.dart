@@ -1,8 +1,8 @@
 // ignore_for_file: must_be_immutable
 
 import 'package:flutter/material.dart';
+import 'package:mwidgets/mwidgets.dart';
 import 'package:mwidgets/src/consts/font_families.dart';
-import 'package:mwidgets/src/consts/font_sizes.dart';
 
 class MText extends StatelessWidget {
   final String? text;
@@ -36,7 +36,7 @@ class MText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    fontFamily ??= FoontFamily.enFont;
+    fontFamily ??= context.isEn ? FoontFamily.enFont : FoontFamily.arFont;
     return SizedBox(
       key: mKey,
       width: maxWidth,
