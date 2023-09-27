@@ -1,9 +1,7 @@
 import 'dart:async';
 
-import 'package:injectable/injectable.dart';
 import 'package:phone_number/phone_number.dart';
 
-@injectable
 class PhoneValidator {
   final StreamController<bool> validate = StreamController<bool>.broadcast();
 

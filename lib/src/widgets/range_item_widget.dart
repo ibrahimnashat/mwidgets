@@ -1,7 +1,6 @@
 import 'package:cupertino_range_slider_improved/cupertino_range_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:injectable/injectable.dart';
 import 'package:mwidgets/src/consts/colors.dart';
 import 'package:mwidgets/src/consts/states.dart';
 import 'package:mwidgets/src/widgets/text.dart';
@@ -70,7 +69,6 @@ class MRangeItemWidget extends StatelessWidget {
   }
 }
 
-@injectable
 class MRangeItemWidgetCubit extends Cubit<ProcessState> {
   double minValue = 0, maxValue = 0, min = 0, max = 0;
 
