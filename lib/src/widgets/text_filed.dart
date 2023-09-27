@@ -27,7 +27,7 @@ class MTextFiled extends StatelessWidget {
   Widget? prefix;
   Widget? outterPrefix;
   InputBorder? border;
-  final bool enabled, readOnly;
+  final bool enabled, readOnly, showCursor;
   final ValueChanged<String>? onChanged;
   final VoidCallback? onEditingComplete;
   final TextInputType keyboardType;
@@ -38,6 +38,7 @@ class MTextFiled extends StatelessWidget {
   Color? activeBorderColor;
   List<TextInputFormatter>? inputFiltering;
   final TextAlign textAlign;
+  final TextDecoration? textDecoration;
   final Key? mKey;
 
   final String? Function(String? valid)? validator;
@@ -58,6 +59,7 @@ class MTextFiled extends StatelessWidget {
     this.lableText,
     this.suffix,
     this.onEditingComplete,
+    this.textDecoration,
     this.prefix,
     this.title,
     this.hintText,
@@ -68,6 +70,7 @@ class MTextFiled extends StatelessWidget {
     this.paddingHorizontal = 21.0,
     this.paddingVertical = 20.0,
     this.enabled = true,
+    this.showCursor = true,
     this.readOnly = false,
     this.keyboardType = TextInputType.name,
     this.maxLines = 1,
@@ -114,6 +117,7 @@ class MTextFiled extends StatelessWidget {
             Expanded(
               child: TextFormField(
                 key: mKey,
+                showCursor: showCursor,
                 readOnly: readOnly,
                 textInputAction: textInputAction,
                 onEditingComplete: onEditingComplete,
@@ -137,6 +141,7 @@ class MTextFiled extends StatelessWidget {
                   fontSize: textSize,
                   color: textColor,
                   fontFamily: fontFamily,
+                  decoration: textDecoration,
                 ),
                 decoration: InputDecoration(
                   focusedBorder: border?.copyWith(
@@ -149,6 +154,7 @@ class MTextFiled extends StatelessWidget {
                     fontSize: textSize,
                     fontFamily: fontFamily,
                     color: Coolors.grey,
+                    decoration: textDecoration,
                   ),
                   border: border,
                   enabledBorder: border,
@@ -163,6 +169,7 @@ class MTextFiled extends StatelessWidget {
                     fontSize: textSize - 2,
                     color: hintColor,
                     fontFamily: fontFamily,
+                    decoration: textDecoration,
                   ),
                   contentPadding: EdgeInsetsDirectional.only(
                     start: paddingHorizontal,

@@ -11,6 +11,7 @@ import 'package:mwidgets/src/consts/pngs.dart';
 
 class MSvg extends StatelessWidget {
   final String? name;
+  final String? path;
   final double width;
   final double height;
   final BoxFit fit;
@@ -21,6 +22,7 @@ class MSvg extends StatelessWidget {
     Key? key,
     this.mkey,
     this.name,
+    this.path,
     this.height = 25,
     this.width = 25,
     this.fit = BoxFit.contain,
@@ -30,7 +32,7 @@ class MSvg extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SvgPicture.asset(
-      "assets/svgs/$name.svg",
+      path ?? "assets/svgs/$name.svg",
       width: width,
       height: height,
       fit: fit,
