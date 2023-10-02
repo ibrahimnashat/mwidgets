@@ -68,10 +68,21 @@ class MDropDown<T> extends StatefulWidget {
 }
 
 class _MDropDownState<T> extends State<MDropDown<T>> {
-  late T? item = widget.setInitial;
+  T? item;
+  ValueNotifier<List<T>> items = ValueNotifier([]);
+
+  @override
+  void initState() {
+    item = widget.setInitial;
+    items.addListener(() {
+      item = null;
+    });
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
+    items.value = widget.options;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -120,7 +131,6 @@ class _MDropDownState<T> extends State<MDropDown<T>> {
               children: [
                 if (widget.perfix != null) widget.perfix!(item),
                 MText(
-                  fontFamily: FoontFamily.enFont,
                   text: widget.hint,
                   color: widget.hintColor ?? Coolors.borderColor,
                   size: widget.textSize,
@@ -130,10 +140,10 @@ class _MDropDownState<T> extends State<MDropDown<T>> {
             ),
             value: item,
             onChanged: (value) {
-              widget.onChanged(value);
               setState(() {
                 item = value;
               });
+              widget.onChanged(value);
             },
             items: widget.options.map((T item) {
               return DropdownMenuItem<T>(
@@ -154,5 +164,12 @@ class _MDropDownState<T> extends State<MDropDown<T>> {
         ),
       ],
     );
+  }
+
+  @override
+  void dispose() {
+    items.removeListener(() {});
+    items.dispose();
+    super.dispose();
   }
 }
