@@ -58,6 +58,9 @@ class _ImagesViewerScreenState extends State<ImagesViewerScreen>
     super.initState();
   }
 
+  double _scale = 1.0;
+  double _previousScale = 0.0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -70,12 +73,25 @@ class _ImagesViewerScreenState extends State<ImagesViewerScreen>
               controller: tabController,
               children: widget.urls.map(
                 (item) {
-                  if (item.contains('http')) {
-                    return MNetworkImage(
-                      url: item,
-                    );
-                  }
-                  return MFileImage(file: item);
+                  return GestureDetector(
+                    onScaleStart: (ScaleStartDetails details) {
+                      _previousScale = _scale;
+                    },
+                    onScaleUpdate: (ScaleUpdateDetails details) {
+                      setState(() => _scale = _previousScale * details.scale);
+                    },
+                    onScaleEnd: (ScaleEndDetails details) {
+                      _previousScale = 0.0;
+                    },
+                    child: Transform(
+                      transform:
+                          Matrix4.diagonal3Values(_scale, _scale, _scale),
+                      alignment: FractionalOffset.center,
+                      child: item.contains('http')
+                          ? MNetworkImage(url: item)
+                          : MFileImage(file: item),
+                    ),
+                  );
                 },
               ).toList(),
             ),
