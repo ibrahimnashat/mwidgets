@@ -73,10 +73,12 @@ class _MDropDownState<T> extends State<MDropDown<T>> {
 
   @override
   void initState() {
-    item = widget.setInitial;
     items.addListener(() {
-      item = null;
+      item = widget.setInitial;
     });
+    if (widget.setInitial != null) {
+      widget.onChanged(widget.setInitial);
+    }
     super.initState();
   }
 

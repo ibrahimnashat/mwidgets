@@ -150,6 +150,7 @@ class MNetworkImage extends StatelessWidget {
   final BoxFit fit;
   final Color? color;
   final double borderRadius;
+  final bool hideLoader;
 
   const MNetworkImage({
     Key? key,
@@ -158,6 +159,7 @@ class MNetworkImage extends StatelessWidget {
     this.height = 25,
     this.width = 25,
     this.fit = BoxFit.contain,
+    this.hideLoader = false,
     this.color,
   }) : super(key: key);
 
@@ -183,11 +185,13 @@ class MNetworkImage extends StatelessWidget {
               borderRadius: borderRadius,
             );
           },
-          placeholder: (context, provider) => MLottieImage(
-            name: Jsons.loading,
-            width: 22.0,
-            height: 22.0,
-          ),
+          placeholder: (context, provider) => hideLoader
+              ? const SizedBox()
+              : MLottieImage(
+                  name: Jsons.loading,
+                  width: 22.0,
+                  height: 22.0,
+                ),
         ),
       );
     } else {
