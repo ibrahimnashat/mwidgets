@@ -21,6 +21,7 @@ class MTextFiled extends StatelessWidget {
   final double textSize;
   final Color hintColor;
   final Color textColor;
+  final Color titleColor;
   String? fontFamily;
   final double paddingHorizontal;
   final double paddingVertical;
@@ -67,6 +68,7 @@ class MTextFiled extends StatelessWidget {
     this.fontFamily,
     this.hintColor = Coolors.borderColor,
     this.textColor = Colors.black,
+    this.titleColor = Colors.black,
     this.textSize = FoontSize.font19,
     this.paddingHorizontal = 21.0,
     this.paddingVertical = 20.0,
@@ -101,7 +103,7 @@ class MTextFiled extends StatelessWidget {
             text: title,
             size: textSize,
             weight: FontWeight.w400,
-            color: Coolors.black,
+            color: titleColor,
           ).addPadding(bottom: 16.0),
         Row(
           crossAxisAlignment: CrossAxisAlignment.start,
