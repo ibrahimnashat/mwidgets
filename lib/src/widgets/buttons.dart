@@ -107,6 +107,7 @@ class MIconButton extends StatelessWidget {
   final Decoration? decoration;
   final double padding;
   final bool stayOnBottom;
+  final Key? mKey;
 
   MIconButton({
     Key? key,
@@ -117,12 +118,14 @@ class MIconButton extends StatelessWidget {
     this.stayOnBottom = false,
     this.height,
     this.width,
+    this.mKey,
     this.padding = 0,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return BouncingWidget(
+      key: mKey,
       stayOnBottom: stayOnBottom,
       duration: const Duration(milliseconds: 100),
       scaleFactor: 1.5,
@@ -150,10 +153,12 @@ class MBackButton extends StatelessWidget {
   final Function? onBack;
   final Color backgroundColor, iconColor;
   final double size;
+  final Key? mKey;
 
   const MBackButton({
     super.key,
     this.onBack,
+    this.mKey,
     this.iconColor = Colors.black,
     this.size = 55,
     this.backgroundColor = const Color(0xff92278F),
@@ -175,13 +180,16 @@ class MBackButton extends StatelessWidget {
           CupertinoIcons.back,
           color: iconColor,
         ),
-      ).addAction(onGesture: () {
-        if (onBack == null) {
-          context.pop();
-        } else {
-          onBack!();
-        }
-      }),
+      ).addAction(
+        mKey: mKey,
+        onGesture: () {
+          if (onBack == null) {
+            context.pop();
+          } else {
+            onBack!();
+          }
+        },
+      ),
     );
   }
 }
