@@ -22,6 +22,7 @@ class MDropDown<T> extends StatefulWidget {
   final RetreiveTitle<T> itemTitle;
   final bool isExpanded;
   final Color? iconColor;
+  final Color? backgroundColor;
   final Color? borderColor;
   final Color? textColor;
   final Color? hintColor;
@@ -56,6 +57,7 @@ class MDropDown<T> extends StatefulWidget {
     this.dropdownColor,
     this.borderColor,
     this.hintColor,
+    this.backgroundColor,
     this.paddingHorizontal = 21.0,
     this.paddingVertical = 6.0,
     this.iconSize = 12.0,
@@ -102,7 +104,7 @@ class _MDropDownState<T> extends State<MDropDown<T>> {
             horizontal: widget.paddingHorizontal,
           ),
           decoration: BoxDecoration(
-            color: Colors.transparent,
+            color: widget.backgroundColor ?? Colors.transparent,
             borderRadius: BorderRadius.circular(widget.borderRadius),
             border: widget.inFill
                 ? null
