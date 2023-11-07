@@ -75,18 +75,19 @@ class _MDropDownState<T> extends State<MDropDown<T>> {
 
   @override
   void initState() {
+    items.value = widget.options;
     items.addListener(() {
-      item = widget.setInitial;
+      if (widget.setInitial != null) {
+        item = widget.setInitial;
+        widget.onChanged(item);
+      }
     });
-    if (widget.setInitial != null) {
-      widget.onChanged(widget.setInitial);
-    }
+
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
-    items.value = widget.options;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
