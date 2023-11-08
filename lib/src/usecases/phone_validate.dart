@@ -3,7 +3,9 @@ import 'dart:async';
 import 'package:phone_number/phone_number.dart';
 
 class PhoneValidator {
-  final StreamController<bool> validate = StreamController<bool>.broadcast();
+  final StreamController<bool> validate;
+
+  PhoneValidator(this.validate);
 
   String countryCode = 'EG';
 
