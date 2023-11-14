@@ -14,7 +14,7 @@ class MDividerItemWidget extends StatelessWidget {
     return Container(
       margin: padding,
       width: double.infinity,
-      color: Coolors.highLight,
+      color: Coolors.highlight,
       height: 1.2,
     );
   }

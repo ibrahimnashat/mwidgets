@@ -5,8 +5,6 @@ import 'package:mwidgets/mwidgets.dart';
 extension OnDateTime on DateTime {
   String get time12Only => DateFormat('hh:mm a').format(this);
 
-  String get ago => DateFormat('hh:mm a').format(this);
-
   String get time24Only => DateFormat('HH:MM').format(this);
 
   String get currentHour => DateFormat('hh').format(this);

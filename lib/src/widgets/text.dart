@@ -53,7 +53,7 @@ class MText extends StatelessWidget {
           fontWeight: weight ?? FontWeight.w300,
         ),
         maxLines: maxLines,
-        overflow: TextOverflow.ellipsis,
+        overflow: maxLines != null ? TextOverflow.ellipsis : null,
         textAlign: align,
       ),
     );

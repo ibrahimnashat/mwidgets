@@ -38,13 +38,13 @@ class MRadioItemWidget extends StatelessWidget {
           padding: const EdgeInsets.all(3.0),
           decoration: BoxDecoration(
             border: Border.all(
-              color: active ? Coolors.primaryColor : Coolors.highLight,
+              color: active ? Coolors.primaryColor : Coolors.highlight,
             ),
             shape: BoxShape.circle,
           ),
           child: Container(
             decoration: BoxDecoration(
-              color: active ? Coolors.primaryColor : Coolors.highLight,
+              color: active ? Coolors.primaryColor : Coolors.highlight,
               shape: BoxShape.circle,
             ),
           ),

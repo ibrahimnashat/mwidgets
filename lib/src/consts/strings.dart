@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 import 'date_time.dart';
 
 extension OnString on String {
@@ -8,8 +10,7 @@ extension OnString on String {
   String get toNameOfMonthAndTime =>
       DateTime.tryParse(this)?.nameOfMonthAndTime ?? '';
 
-  String get ago =>
-      DateTime.now().difference(DateTime.parse(this)).inDays.toString();
+  String ago(BuildContext context) => DateTime.parse(this).timeAgo(context);
 
   String get toTimeOnly => DateTime.tryParse(this)?.time12Only ?? '';
 

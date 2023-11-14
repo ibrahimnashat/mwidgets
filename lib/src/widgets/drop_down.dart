@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:mwidgets/src/consts/colors.dart';
-import 'package:mwidgets/src/consts/font_families.dart';
 import 'package:mwidgets/src/consts/svgs.dart';
 import 'package:mwidgets/src/extensions/padding.dart';
 import 'package:mwidgets/src/widgets/image.dart';
@@ -25,6 +24,7 @@ class MDropDown<T> extends StatefulWidget {
   final Color? backgroundColor;
   final Color? borderColor;
   final Color? textColor;
+  final Color? titleColor;
   final Color? hintColor;
   final double textSize;
   final Color? dropdownColor;
@@ -35,6 +35,7 @@ class MDropDown<T> extends StatefulWidget {
   final double iconSize;
   final double borderRadius;
   final bool hideDropdown;
+  final FontWeight? titleWeight;
 
   MDropDown({
     Key? key,
@@ -43,6 +44,7 @@ class MDropDown<T> extends StatefulWidget {
     this.inFill = true,
     this.perfix,
     this.title,
+    this.titleColor,
     this.height,
     this.options = const [],
     this.removeBorder = true,
@@ -57,6 +59,7 @@ class MDropDown<T> extends StatefulWidget {
     this.dropdownColor,
     this.borderColor,
     this.hintColor,
+    this.titleWeight,
     this.backgroundColor,
     this.paddingHorizontal = 21.0,
     this.paddingVertical = 6.0,
@@ -94,9 +97,8 @@ class _MDropDownState<T> extends State<MDropDown<T>> {
           MText(
             text: widget.title,
             size: widget.textSize,
-            weight: FontWeight.w500,
-            fontFamily: FoontFamily.enFont,
-            color: Coolors.primaryColor,
+            weight: widget.titleWeight,
+            color: widget.titleColor ?? Coolors.primaryColor,
           ).addPadding(bottom: 12.0),
         Container(
           padding: EdgeInsets.symmetric(
@@ -108,7 +110,7 @@ class _MDropDownState<T> extends State<MDropDown<T>> {
             borderRadius: BorderRadius.circular(widget.borderRadius),
             border: widget.inFill
                 ? null
-                : Border.all(color: widget.borderColor ?? Coolors.highLight),
+                : Border.all(color: widget.borderColor ?? Coolors.highlight),
           ),
           child: DropdownButton<T>(
             dropdownColor: widget.dropdownColor,

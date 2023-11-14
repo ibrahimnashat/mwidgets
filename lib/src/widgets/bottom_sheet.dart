@@ -53,7 +53,7 @@ void showMBottomSheet({
                       ),
                       boxShadow: [
                         BoxShadow(
-                          color: Coolors.highLight,
+                          color: Coolors.highlight,
                           blurRadius: 2.0,
                         )
                       ],

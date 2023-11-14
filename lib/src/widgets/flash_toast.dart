@@ -85,7 +85,7 @@ class FToast {
                           borderRadius: BorderRadius.circular(24.0),
                           boxShadow: const [
                             BoxShadow(
-                              color: Coolors.highLight,
+                              color: Coolors.highlight,
                               spreadRadius: 1,
                               blurRadius: 1,
                             )

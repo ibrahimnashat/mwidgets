@@ -91,7 +91,7 @@ class MTextFiled extends StatelessWidget {
     border ??= OutlineInputBorder(
       borderRadius: BorderRadius.circular(8.0),
       borderSide: const BorderSide(
-        color: Coolors.highLight,
+        color: Coolors.highlight,
       ),
     );
     return Column(

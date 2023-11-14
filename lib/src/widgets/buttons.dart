@@ -7,6 +7,7 @@ import 'package:mwidgets/src/consts/colors.dart';
 import 'package:mwidgets/src/consts/font_sizes.dart';
 import 'package:mwidgets/src/extensions/context.dart';
 import 'package:mwidgets/src/extensions/padding.dart';
+import 'package:mwidgets/src/extensions/radius.dart';
 import 'package:mwidgets/src/extensions/widget.dart';
 import 'package:mwidgets/src/widgets/image.dart';
 import 'package:mwidgets/src/widgets/text.dart';
@@ -210,7 +211,7 @@ class MSvgButton extends StatelessWidget {
     this.width = 45.0,
     this.height = 45.0,
     this.iconSize = 20.0,
-    this.backgroundColor = Coolors.highLight,
+    this.backgroundColor = Coolors.highlight,
     this.color,
     this.borderRadius = 25.0,
   });
@@ -377,5 +378,57 @@ class _MAnimatedButtonState extends State<MAnimatedButton>
     controllerScale.dispose();
     controller.dispose();
     super.dispose();
+  }
+}
+
+class MOutlineButton extends StatelessWidget {
+  final double width, height, radius;
+  final Color textColor, borderColor, iconColor;
+  final double titleSize;
+  final String? icon, title;
+  final Function onTap;
+
+  const MOutlineButton({
+    Key? key,
+    this.width = 120.0,
+    this.height = 60.0,
+    this.radius = 16.0,
+    this.borderColor = Coolors.black,
+    this.textColor = Coolors.black,
+    this.iconColor = Coolors.black,
+    this.icon,
+    this.title,
+    this.titleSize = 20.0,
+    required this.onTap,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: width,
+      height: height,
+      decoration: BoxDecoration(
+        border: Border.all(color: borderColor),
+        borderRadius: MBorderRadius.set(all: radius),
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          if (icon != null)
+            MSvg(
+              name: icon,
+              color: iconColor,
+              height: 20.0,
+            ).addPadding(end: 12.0),
+          if (title != null)
+            MText(
+              text: title,
+              color: textColor,
+              weight: FontWeight.w400,
+              size: titleSize,
+            ),
+        ],
+      ),
+    ).addAction(onGesture: onTap);
   }
 }
