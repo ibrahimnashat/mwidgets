@@ -42,6 +42,7 @@ class MTextFiled extends StatelessWidget {
   final TextAlign textAlign;
   final TextDecoration? textDecoration;
   final Key? mKey;
+  final FontWeight? titleWeight;
 
   final String? Function(String? valid)? validator;
 
@@ -53,6 +54,7 @@ class MTextFiled extends StatelessWidget {
     this.controller,
     this.inputFiltering,
     this.outterPrefix,
+    this.titleWeight,
     this.textInputAction,
     this.focusNode,
     this.border,
@@ -102,7 +104,7 @@ class MTextFiled extends StatelessWidget {
           MText(
             text: title,
             size: textSize,
-            weight: FontWeight.w400,
+            weight: titleWeight ?? FontWeight.w400,
             color: titleColor,
           ).addPadding(bottom: 16.0),
         Row(
