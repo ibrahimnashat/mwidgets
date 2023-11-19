@@ -11,6 +11,7 @@ void showMBottomSheet({
   required Widget bottomSheet,
   String? title,
   bool noScrolling = false,
+  bool removeTransparentBackground = false,
 }) {
   showModalBottomSheet(
     enableDrag: true,
@@ -46,18 +47,20 @@ void showMBottomSheet({
                     padding: const EdgeInsetsDirectional.only(
                       top: 30.0,
                     ),
-                    decoration: const BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.vertical(
-                        top: Radius.circular(30.0),
-                      ),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Coolors.highlight,
-                          blurRadius: 2.0,
-                        )
-                      ],
-                    ),
+                    decoration: removeTransparentBackground
+                        ? null
+                        : const BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.vertical(
+                              top: Radius.circular(30.0),
+                            ),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Coolors.highlight,
+                                blurRadius: 2.0,
+                              )
+                            ],
+                          ),
                     child: noScrolling
                         ? bottomSheet
                         : MScroll(
