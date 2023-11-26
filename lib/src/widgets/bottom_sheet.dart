@@ -24,55 +24,58 @@ void showMBottomSheet({
     backgroundColor: Colors.transparent,
     context: context,
     builder: (context) {
-      return Container(
-        constraints: BoxConstraints(
-          maxHeight: context.height * 0.85,
-          minWidth: context.width,
-        ),
-        child: BackdropFilter(
-          filter: ImageFilter.blur(sigmaX: 8.0, sigmaY: 8.0),
-          child: SafeArea(
-            bottom: false,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                GestureDetector(
-                  onTap: () {},
-                  child: Container(
-                    constraints: BoxConstraints(
-                      maxHeight: context.height * 0.78,
-                      minWidth: context.width,
-                    ),
-                    margin: const EdgeInsets.all(2.0),
-                    padding: const EdgeInsetsDirectional.only(
-                      top: 30.0,
-                    ),
-                    decoration: removeTransparentBackground
-                        ? null
-                        : const BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.vertical(
-                              top: Radius.circular(30.0),
-                            ),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Coolors.highlight,
-                                blurRadius: 2.0,
-                              )
-                            ],
-                          ),
-                    child: noScrolling
-                        ? bottomSheet
-                        : MScroll(
-                            child: bottomSheet,
-                          ),
+      final body = SafeArea(
+        bottom: false,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            GestureDetector(
+              onTap: () {},
+              child: Container(
+                constraints: BoxConstraints(
+                  maxHeight: context.height * 0.78,
+                  minWidth: context.width,
+                ),
+                margin: const EdgeInsets.all(2.0),
+                padding: const EdgeInsetsDirectional.only(
+                  top: 30.0,
+                ),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: const BorderRadius.vertical(
+                    top: Radius.circular(30.0),
                   ),
-                )
-              ],
-            ).addAction(onGesture: () => context.pop()),
-          ),
-        ),
+                  boxShadow: removeTransparentBackground
+                      ? null
+                      : [
+                          const BoxShadow(
+                            color: Coolors.highlight,
+                            blurRadius: 2.0,
+                          )
+                        ],
+                ),
+                child: noScrolling
+                    ? bottomSheet
+                    : MScroll(
+                        child: bottomSheet,
+                      ),
+              ),
+            )
+          ],
+        ).addAction(onGesture: () => context.pop()),
       );
+      return removeTransparentBackground
+          ? body
+          : Container(
+              constraints: BoxConstraints(
+                maxHeight: context.height * 0.85,
+                minWidth: context.width,
+              ),
+              child: BackdropFilter(
+                filter: ImageFilter.blur(sigmaX: 8.0, sigmaY: 8.0),
+                child: body,
+              ),
+            );
     },
   );
 }

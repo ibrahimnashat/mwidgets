@@ -122,6 +122,9 @@ class MTextFiled extends StatelessWidget {
             Expanded(
               child: TextFormField(
                 key: mKey,
+                onTapOutside: (event) {
+                  SystemChannels.textInput.invokeMethod('TextInput.hide');
+                },
                 showCursor: showCursor,
                 readOnly: readOnly,
                 textInputAction: textInputAction,
