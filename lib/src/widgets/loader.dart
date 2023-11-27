@@ -17,8 +17,8 @@ class Loader {
   }
 
   static Widget loadingSkeleton({
-    required double height,
-    required double width,
+    double? height,
+    double? width,
     MPadding padding = const MPadding.set(horizontal: 24.0, vertical: 12.0),
     MBorderRadius? borderRadius,
   }) {
