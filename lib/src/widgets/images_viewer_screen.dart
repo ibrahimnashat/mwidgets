@@ -115,12 +115,12 @@ class _ImagesViewerScreenState extends State<ImagesViewerScreen>
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: List.generate(
                     widget.urls.length,
-                    (index) {
-                      final active = index == index;
+                    (key) {
+                      final active = index == key;
                       return Container(
                         margin: const EdgeInsetsDirectional.only(start: 4.0),
                         width: active ? position.value : 12.0,
-                        height: 12.0,
+                        height: 8.0,
                         decoration: BoxDecoration(
                           color: active ? Coolors.primaryColor : Coolors.grey,
                           borderRadius: BorderRadius.circular(12.0),
