@@ -19,7 +19,7 @@ class MTextFiled extends StatelessWidget {
   final String? lableText;
   final String? title;
   final double textSize;
-  final Color hintColor;
+  final Color? hintColor;
   final Color textColor;
   final Color titleColor;
   String? fontFamily;
@@ -68,7 +68,7 @@ class MTextFiled extends StatelessWidget {
     this.title,
     this.hintText,
     this.fontFamily,
-    this.hintColor = Coolors.borderColor,
+    this.hintColor,
     this.textColor = Colors.black,
     this.titleColor = Colors.black,
     this.textSize = FoontSize.font19,
@@ -89,6 +89,7 @@ class MTextFiled extends StatelessWidget {
     inputFiltering ??= [];
     fontFamily ??= context.isEn ? FoontFamily.enFont : FoontFamily.arFont;
     activeBorderColor ??= Coolors.primaryColor;
+    hintColor ??= Coolors.highlight2;
     if (hintText == 'null') hintText = null;
     border ??= OutlineInputBorder(
       borderRadius: BorderRadius.circular(8.0),
