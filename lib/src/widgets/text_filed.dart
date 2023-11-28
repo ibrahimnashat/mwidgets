@@ -19,7 +19,7 @@ class MTextFiled extends StatelessWidget {
   final String? lableText;
   final String? title;
   final double textSize;
-  final Color? hintColor;
+  Color? hintColor, labelColor;
   final Color textColor;
   final Color titleColor;
   String? fontFamily;
@@ -70,6 +70,7 @@ class MTextFiled extends StatelessWidget {
     this.fontFamily,
     this.hintColor,
     this.textColor = Colors.black,
+    this.labelColor = Colors.grey,
     this.titleColor = Colors.black,
     this.textSize = FoontSize.font19,
     this.paddingHorizontal = 21.0,
@@ -162,7 +163,7 @@ class MTextFiled extends StatelessWidget {
                   labelStyle: TextStyle(
                     fontSize: textSize,
                     fontFamily: fontFamily,
-                    color: Coolors.grey,
+                    color: labelColor,
                     decoration: textDecoration,
                   ),
                   border: border,
