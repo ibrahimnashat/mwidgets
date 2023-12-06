@@ -31,6 +31,7 @@ export 'src/widgets/radio_item_widget.dart';
 export 'src/widgets/range_item_widget.dart';
 export 'src/widgets/rating.dart';
 export 'src/widgets/scrolling.dart';
+export 'src/widgets/show_image_viewer_dialog.dart';
 export 'src/widgets/text.dart';
 export 'src/widgets/text_filed.dart';
 export 'src/widgets/title_divider_item_widget.dart';

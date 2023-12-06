@@ -1,7 +1,7 @@
 name: mwidgets
 description: Contains a custom widgets like MText, MDropdown, MFileImage, MNetworkImage, MLottie, MSvg,
   MBouncingButton others
-version: 0.5.6
+version: 0.5.7
 homepage: https://github.com/ibrahimnashat/mwidgets.git
 
 environment:
@@ -28,6 +28,7 @@ dependencies:
   skeletons: ^0.0.3
   cupertino_range_slider_improved: ^2.0.1
   phone_number: ^2.0.1
+  photo_view: ^0.14.0
 
 dev_dependencies:
   flutter_test:
