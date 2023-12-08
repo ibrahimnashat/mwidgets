@@ -10,7 +10,6 @@ export 'src/consts/font_sizes.dart';
 export 'src/consts/kprint.dart';
 export 'src/consts/strings.dart';
 export 'src/consts/validation.dart';
-export 'src/consts/validation.dart';
 export 'src/extensions/context.dart';
 export 'src/extensions/padding.dart';
 export 'src/extensions/radius.dart';
