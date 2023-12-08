@@ -89,7 +89,7 @@ class MBouncingButton extends StatelessWidget {
                       color: iconTransparent ? null : textColor,
                       height: iconSize,
                       width: iconSize,
-                    ),
+                    ).addPadding(end: 10.0),
                   if (title != null)
                     MText(
                       text: title,
