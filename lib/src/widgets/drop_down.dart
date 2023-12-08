@@ -5,7 +5,7 @@ import 'package:mwidgets/src/extensions/padding.dart';
 import 'package:mwidgets/src/widgets/image.dart';
 import 'package:mwidgets/src/widgets/text.dart';
 
-typedef RetreiveTitle<T> = String Function(T json);
+typedef RetreiveTitle<T> = String Function(T item);
 
 // ignore: must_be_immutable
 class MDropDown<T> extends StatefulWidget {
@@ -13,6 +13,7 @@ class MDropDown<T> extends StatefulWidget {
   final T? setInitial;
   final String? hint;
   final String? title;
+  final EdgeInsetsGeometry? dropdownPadding, titlePadding;
   double? height;
   final bool check;
   final ValueChanged<T?> onChanged;
@@ -26,23 +27,24 @@ class MDropDown<T> extends StatefulWidget {
   final Color? textColor;
   final Color? titleColor;
   final Color? hintColor;
-  final double textSize;
+  final double textSize, titleSize;
   final Color? dropdownColor;
   final bool inFill;
-  final Widget Function(T? itemImage)? perfix;
-  final double paddingHorizontal;
-  final double paddingVertical;
+  final Widget Function(T? itemImage)? prefix;
+
   final double iconSize;
   final double borderRadius;
   final bool hideDropdown;
-  final FontWeight? titleWeight;
+  final FontWeight? titleWeight, textWeight;
 
   MDropDown({
     Key? key,
     required this.onChanged,
     required this.itemTitle,
     this.inFill = true,
-    this.perfix,
+    this.prefix,
+    this.dropdownPadding = const MPadding.set(horizontal: 21.0, vertical: 6.0),
+    this.titlePadding = const MPadding.set(vertical: 12.0),
     this.title,
     this.titleColor,
     this.height,
@@ -56,13 +58,13 @@ class MDropDown<T> extends StatefulWidget {
     this.iconColor,
     this.textColor,
     this.textSize = 20,
+    this.titleSize = 20,
     this.dropdownColor,
     this.borderColor,
     this.hintColor,
     this.titleWeight,
+    this.textWeight,
     this.backgroundColor,
-    this.paddingHorizontal = 21.0,
-    this.paddingVertical = 6.0,
     this.iconSize = 12.0,
     this.borderRadius = 5.0,
     this.hideDropdown = false,
@@ -94,17 +96,18 @@ class _MDropDownState<T> extends State<MDropDown<T>> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         if (widget.title != null)
-          MText(
-            text: widget.title,
-            size: widget.textSize,
-            weight: widget.titleWeight,
-            color: widget.titleColor ?? Coolors.primaryColor,
-          ).addPadding(bottom: 12.0),
-        Container(
-          padding: EdgeInsets.symmetric(
-            vertical: widget.paddingVertical,
-            horizontal: widget.paddingHorizontal,
+          Padding(
+            padding: widget.titlePadding ?? EdgeInsets.zero,
+            child: MText(
+              text: widget.title,
+              size: widget.titleSize,
+              weight: widget.titleWeight,
+              color: widget.titleColor ?? Coolors.primaryColor,
+            ),
           ),
+        Container(
+          height: widget.height,
+          padding: widget.dropdownPadding,
           decoration: BoxDecoration(
             color: widget.backgroundColor ?? Colors.transparent,
             borderRadius: BorderRadius.circular(widget.borderRadius),
@@ -135,11 +138,12 @@ class _MDropDownState<T> extends State<MDropDown<T>> {
                   ).addPadding(start: widget.removeBorder ? 12.0 : 0.0),
             hint: Row(
               children: [
-                if (widget.perfix != null) widget.perfix!(item),
+                if (widget.prefix != null) widget.prefix!(item),
                 MText(
                   text: widget.hint,
                   color: widget.hintColor ?? Coolors.borderColor,
                   size: widget.textSize,
+                  weight: widget.titleWeight,
                   align: widget.isCenter ? TextAlign.center : TextAlign.start,
                 ).addPadding(bottom: widget.removeBorder ? 0 : 21.0),
               ],
@@ -156,11 +160,12 @@ class _MDropDownState<T> extends State<MDropDown<T>> {
                 value: item,
                 child: Row(
                   children: [
-                    if (widget.perfix != null) widget.perfix!(item),
+                    if (widget.prefix != null) widget.prefix!(item),
                     MText(
                       color: widget.textColor ?? Coolors.black,
                       size: widget.textSize,
                       text: widget.itemTitle(item),
+                      weight: widget.textWeight,
                     ),
                   ],
                 ),
