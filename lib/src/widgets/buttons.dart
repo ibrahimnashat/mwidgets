@@ -97,9 +97,9 @@ class MBouncingButton extends StatelessWidget {
                       color: textColor!,
                       size: textSize!,
                       weight: FontWeight.w400,
-                    ).addPadding(horizontal: 12.0),
+                    ),
                 ],
-              )
+              ).addPadding(horizontal: 12.0)
             : null,
       ),
     );
