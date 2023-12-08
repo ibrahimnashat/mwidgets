@@ -13,10 +13,13 @@ import 'package:mwidgets/src/widgets/image.dart';
 import 'package:mwidgets/src/widgets/text.dart';
 import 'package:square_percent_indicater/square_percent_indicater.dart';
 
+enum ButtonType { outline, filled }
+
 class MBouncingButton extends StatelessWidget {
   final String? title;
   Color? textColor;
   double? textSize;
+  ButtonType buttonType;
   double iconSize;
   Function? onTap;
   double? width;
@@ -34,6 +37,7 @@ class MBouncingButton extends StatelessWidget {
     Key? key,
     this.mKey,
     this.textColor,
+    this.buttonType = ButtonType.filled,
     this.textSize,
     this.textDirection,
     this.iconSize = 20.0,
@@ -67,9 +71,12 @@ class MBouncingButton extends StatelessWidget {
         width: width,
         height: height ?? 60,
         decoration: BoxDecoration(
-          color: color,
+          color: buttonType == ButtonType.filled ? color : null,
           borderRadius: BorderRadius.circular(borderRadius),
-          gradient: gradient,
+          border: buttonType == ButtonType.outline
+              ? Border.all(color: color)
+              : null,
+          gradient: buttonType == ButtonType.filled ? gradient : null,
         ),
         child: !willAnimated
             ? Row(
