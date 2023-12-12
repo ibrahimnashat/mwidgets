@@ -156,23 +156,12 @@ class _MDropDownState<T> extends State<MDropDown<T>> {
               });
               widget.onChanged(value);
             },
+            style: TextStyle(
+              color: widget.selectedItemColor ?? Coolors.black,
+              fontSize: widget.textSize,
+              fontWeight: widget.textWeight,
+            ),
             items: widget.options.map((T item) {
-              if (this.item == item) {
-                return DropdownMenuItem<T>(
-                  value: item,
-                  child: Row(
-                    children: [
-                      if (widget.prefix != null) widget.prefix!(item),
-                      MText(
-                        color: widget.selectedItemColor ?? Coolors.black,
-                        size: widget.textSize,
-                        text: widget.itemTitle(item),
-                        weight: widget.textWeight,
-                      ),
-                    ],
-                  ),
-                );
-              }
               return DropdownMenuItem<T>(
                 value: item,
                 child: Row(
