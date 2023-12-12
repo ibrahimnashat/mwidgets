@@ -24,7 +24,7 @@ class MDropDown<T> extends StatefulWidget {
   final Color? iconColor;
   final Color? backgroundColor;
   final Color? borderColor;
-  final Color? textColor;
+  final Color? textColor, selectedItemColor;
   final Color? titleColor;
   final Color? hintColor;
   final double textSize, titleSize;
@@ -65,6 +65,7 @@ class MDropDown<T> extends StatefulWidget {
     this.titleWeight,
     this.textWeight,
     this.backgroundColor,
+    this.selectedItemColor,
     this.iconSize = 12.0,
     this.borderRadius = 5.0,
     this.hideDropdown = false,
@@ -156,6 +157,22 @@ class _MDropDownState<T> extends State<MDropDown<T>> {
               widget.onChanged(value);
             },
             items: widget.options.map((T item) {
+              if (this.item == item) {
+                return DropdownMenuItem<T>(
+                  value: item,
+                  child: Row(
+                    children: [
+                      if (widget.prefix != null) widget.prefix!(item),
+                      MText(
+                        color: widget.selectedItemColor ?? Coolors.black,
+                        size: widget.textSize,
+                        text: widget.itemTitle(item),
+                        weight: widget.textWeight,
+                      ),
+                    ],
+                  ),
+                );
+              }
               return DropdownMenuItem<T>(
                 value: item,
                 child: Row(

@@ -1,5 +1,6 @@
 class FoontSize {
   static const double font12 = 12;
+  static const double font13 = 13;
   static const double font14 = 14;
   static const double font15 = 15;
   static const double font16 = 16;
@@ -7,16 +8,22 @@ class FoontSize {
   static const double font18 = 18;
   static const double font19 = 19;
   static const double font20 = 20;
-  static const double font22 = 22;
   static const double font21 = 21;
+  static const double font22 = 22;
   static const double font23 = 23;
   static const double font24 = 24;
   static const double font25 = 25;
   static const double font26 = 26;
+  static const double font27 = 27;
   static const double font28 = 28;
+  static const double font29 = 29;
   static const double font30 = 30;
+  static const double font31 = 31;
   static const double font32 = 32;
+  static const double font33 = 33;
   static const double font34 = 34;
+  static const double font35 = 35;
   static const double font36 = 36;
+  static const double font37 = 37;
   static const double font38 = 38;
 }
