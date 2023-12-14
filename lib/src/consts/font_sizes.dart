@@ -1,4 +1,8 @@
 class FoontSize {
+  static const double font8 = 8;
+  static const double font9 = 9;
+  static const double font10 = 10;
+  static const double font11 = 11;
   static const double font12 = 12;
   static const double font13 = 13;
   static const double font14 = 14;
