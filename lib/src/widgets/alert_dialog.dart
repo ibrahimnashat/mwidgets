@@ -18,6 +18,8 @@ showMCupertinoDialog({
   Widget? topTitle,
   bool showExit = false,
   Function? onTap,
+  BorderRadiusGeometry? borderRadius,
+  EdgeInsetsGeometry? margin,
 }) {
   return showCupertinoDialog(
     context: context,
@@ -34,10 +36,10 @@ showMCupertinoDialog({
                 GestureDetector(
                   onTap: () {},
                   child: Container(
-                    margin: const EdgeInsets.all(24.0),
+                    margin: margin ?? const EdgeInsets.all(24.0),
                     decoration: BoxDecoration(
                       color: Colors.white,
-                      borderRadius: BorderRadius.circular(50.0),
+                      borderRadius: borderRadius ?? BorderRadius.circular(50.0),
                     ),
                     child: Column(
                       children: [
