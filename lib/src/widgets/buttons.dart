@@ -32,12 +32,15 @@ class MBouncingButton extends StatelessWidget {
   final TextDirection? textDirection;
   final bool willAnimated;
   final Key? mKey;
+  final bool bouncing;
+  final FontWeight weight;
 
   MBouncingButton({
     Key? key,
     this.mKey,
     this.textColor,
     this.buttonType = ButtonType.filled,
+    this.weight = FontWeight.w500,
     this.textSize,
     this.textDirection,
     this.iconSize = 20.0,
@@ -48,6 +51,7 @@ class MBouncingButton extends StatelessWidget {
     this.color,
     this.borderRadius = 14.0,
     this.iconTransparent = false,
+    this.bouncing = true,
     this.icon,
     this.gradient,
     this.willAnimated = false,
@@ -59,50 +63,60 @@ class MBouncingButton extends StatelessWidget {
     textColor ??= Coolors.white;
     textSize ??= FoontSize.font17;
     if (gradient == null) color ??= Coolors.primaryColor;
-    return BouncingWidget(
-      key: mKey,
-      duration: const Duration(milliseconds: 100),
-      scaleFactor: 1.5,
-      onPressed: () {
-        if (onTap != null) onTap!();
-      },
-      child: Container(
-        alignment: Alignment.center,
-        width: width,
-        height: height ?? 60,
-        decoration: BoxDecoration(
-          color: buttonType == ButtonType.filled ? color : null,
-          borderRadius: BorderRadius.circular(borderRadius),
-          border: buttonType == ButtonType.outline
-              ? Border.all(color: color)
-              : null,
-          gradient: buttonType == ButtonType.filled ? gradient : null,
-        ),
-        child: !willAnimated
-            ? Row(
-                textDirection: textDirection,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  if (icon != null)
-                    MSvg(
-                      name: icon,
-                      color: iconTransparent ? null : textColor,
-                      height: iconSize,
-                      width: iconSize,
-                    ).addPadding(end: 10.0),
-                  if (title != null)
-                    MText(
-                      text: title,
-                      align: TextAlign.center,
-                      color: textColor!,
-                      size: textSize!,
-                      weight: FontWeight.w400,
-                    ),
-                ],
-              ).addPadding(horizontal: 12.0)
-            : null,
+    final widget = Container(
+      alignment: Alignment.center,
+      width: width,
+      height: height ?? 60,
+      decoration: BoxDecoration(
+        color: buttonType == ButtonType.filled ? color : null,
+        borderRadius: BorderRadius.circular(borderRadius),
+        border:
+            buttonType == ButtonType.outline ? Border.all(color: color) : null,
+        gradient: buttonType == ButtonType.filled ? gradient : null,
       ),
+      child: !willAnimated
+          ? Row(
+              textDirection: textDirection,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                if (icon != null)
+                  MSvg(
+                    name: icon,
+                    color: iconTransparent ? null : textColor,
+                    height: iconSize,
+                    width: iconSize,
+                  ).addPadding(end: 10.0),
+                if (title != null)
+                  MText(
+                    text: title,
+                    align: TextAlign.center,
+                    color: textColor!,
+                    size: textSize!,
+                    weight: weight,
+                  ),
+              ],
+            ).addPadding(horizontal: 12.0)
+          : null,
     );
+    if (bouncing) {
+      return BouncingWidget(
+        key: mKey,
+        duration: const Duration(milliseconds: 100),
+        scaleFactor: bouncing ? 1.5 : 1.0,
+        onPressed: () {
+          if (onTap != null) onTap!();
+        },
+        child: widget,
+      );
+    } else {
+      return GestureDetector(
+        key: mKey,
+        onTap: () {
+          if (onTap != null) onTap!();
+        },
+        child: widget,
+      );
+    }
   }
 }
 

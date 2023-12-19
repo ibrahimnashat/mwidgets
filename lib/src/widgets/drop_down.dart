@@ -14,7 +14,7 @@ class MDropDown<T> extends StatefulWidget {
   final String? hint;
   final String? title;
   final EdgeInsetsGeometry? dropdownPadding, titlePadding;
-  double? height;
+  double? height, itemHeight, menuMaxHeight;
   final bool check;
   final ValueChanged<T?> onChanged;
   final bool isCenter;
@@ -24,17 +24,18 @@ class MDropDown<T> extends StatefulWidget {
   final Color? iconColor;
   final Color? backgroundColor;
   final Color? borderColor;
-  final Color? textColor;
+  final Color? textColor, selectedItemColor;
   final Color? titleColor;
   final Color? hintColor;
   final double textSize, titleSize;
   final Color? dropdownColor;
   final bool inFill;
-  final Widget Function(T? itemImage)? prefix;
+  final Widget Function(T? itemImage)? prefix, selectedItem, optionItem;
 
   final double iconSize;
+  final int elevation;
   final double borderRadius;
-  final bool hideDropdown;
+  final bool hideDropdown, isDense;
   final FontWeight? titleWeight, textWeight;
 
   MDropDown({
@@ -43,6 +44,9 @@ class MDropDown<T> extends StatefulWidget {
     required this.itemTitle,
     this.inFill = true,
     this.prefix,
+    this.menuMaxHeight,
+    this.selectedItem,
+    this.optionItem,
     this.dropdownPadding = const MPadding.set(horizontal: 21.0, vertical: 6.0),
     this.titlePadding = const MPadding.set(vertical: 12.0),
     this.title,
@@ -50,21 +54,25 @@ class MDropDown<T> extends StatefulWidget {
     this.height,
     this.options = const [],
     this.removeBorder = true,
+    this.isDense = false,
     this.hint = "",
     this.isCenter = false,
     this.setInitial,
     this.check = false,
     this.isExpanded = true,
     this.iconColor,
+    this.itemHeight,
     this.textColor,
     this.textSize = 20,
     this.titleSize = 20,
+    this.elevation = 2,
     this.dropdownColor,
     this.borderColor,
     this.hintColor,
     this.titleWeight,
     this.textWeight,
     this.backgroundColor,
+    this.selectedItemColor,
     this.iconSize = 12.0,
     this.borderRadius = 5.0,
     this.hideDropdown = false,
@@ -116,8 +124,11 @@ class _MDropDownState<T> extends State<MDropDown<T>> {
                 : Border.all(color: widget.borderColor ?? Coolors.highlight),
           ),
           child: DropdownButton<T>(
+            isDense: widget.isDense,
+            itemHeight: widget.itemHeight,
+            menuMaxHeight: widget.menuMaxHeight,
             dropdownColor: widget.dropdownColor,
-            elevation: 2,
+            elevation: widget.elevation,
             underline: widget.removeBorder
                 ? const SizedBox()
                 : Container(
@@ -155,20 +166,42 @@ class _MDropDownState<T> extends State<MDropDown<T>> {
               });
               widget.onChanged(value);
             },
+            selectedItemBuilder: (context) {
+              return widget.options.map((e) {
+                if (item != null && widget.selectedItem != null) {
+                  return widget.selectedItem!(item);
+                } else if (item != null) {
+                  return Row(
+                    children: [
+                      if (widget.prefix != null) widget.prefix!(item),
+                      MText(
+                        color: widget.selectedItemColor ?? Coolors.black,
+                        size: widget.textSize,
+                        text: widget.itemTitle(item!),
+                        weight: widget.textWeight,
+                      ),
+                    ],
+                  );
+                }
+                return const SizedBox();
+              }).toList();
+            },
             items: widget.options.map((T item) {
               return DropdownMenuItem<T>(
                 value: item,
-                child: Row(
-                  children: [
-                    if (widget.prefix != null) widget.prefix!(item),
-                    MText(
-                      color: widget.textColor ?? Coolors.black,
-                      size: widget.textSize,
-                      text: widget.itemTitle(item),
-                      weight: widget.textWeight,
-                    ),
-                  ],
-                ),
+                child: widget.optionItem != null
+                    ? widget.optionItem!(item)
+                    : Row(
+                        children: [
+                          if (widget.prefix != null) widget.prefix!(item),
+                          MText(
+                            color: widget.textColor ?? Coolors.black,
+                            size: widget.textSize,
+                            text: widget.itemTitle(item),
+                            weight: widget.textWeight,
+                          ),
+                        ],
+                      ),
               );
             }).toList(),
           ),

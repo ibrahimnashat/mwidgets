@@ -13,36 +13,26 @@ import '../consts/font_sizes.dart';
 
 class MTextFiled extends StatelessWidget {
   final TextEditingController? controller;
-  final int? maxLength;
-  final Color? fillColor;
-  String? hintText;
-  final String? lableText;
-  final String? title;
-  final double textSize;
-  Color? hintColor, labelColor;
-  final Color textColor;
-  final Color titleColor;
-  String? fontFamily;
-  final double paddingHorizontal;
-  final double paddingVertical;
-  Widget? suffix;
-  Widget? prefix;
-  Widget? outterPrefix;
+  final int? maxLength, maxLines;
+  final String? lableText, title;
+  final double textSize, hintSize;
+  String? hintText, fontFamily;
+  Color? hintColor, labelColor, fillColor, activeBorderColor;
+  final Color textColor, titleColor;
+  final EdgeInsetsGeometry? titlePadding, contentPadding;
+  Widget? suffix, prefix, outterPrefix;
   InputBorder? border;
-  final bool enabled, readOnly, showCursor;
+  final bool enabled, readOnly, showCursor, obscureText;
   final ValueChanged<String>? onChanged;
   final VoidCallback? onEditingComplete;
   final TextInputType keyboardType;
-  final int? maxLines;
-  final bool obscureText;
   final FocusNode? focusNode;
   final TextInputAction? textInputAction;
-  Color? activeBorderColor;
   List<TextInputFormatter>? inputFiltering;
   final TextAlign textAlign;
   final TextDecoration? textDecoration;
   final Key? mKey;
-  final FontWeight? titleWeight;
+  final FontWeight? titleWeight, lableWeight, textWeight, hintWeight;
 
   final String? Function(String? valid)? validator;
 
@@ -53,11 +43,15 @@ class MTextFiled extends StatelessWidget {
     this.validator,
     this.controller,
     this.inputFiltering,
+    this.lableWeight,
+    this.textWeight,
+    this.hintWeight,
     this.outterPrefix,
     this.titleWeight,
     this.textInputAction,
     this.focusNode,
     this.border,
+    this.titlePadding,
     this.maxLength,
     this.fillColor,
     this.lableText,
@@ -73,8 +67,8 @@ class MTextFiled extends StatelessWidget {
     this.labelColor = Colors.grey,
     this.titleColor = Colors.black,
     this.textSize = FoontSize.font19,
-    this.paddingHorizontal = 21.0,
-    this.paddingVertical = 20.0,
+    this.hintSize = FoontSize.font17,
+    this.contentPadding = const MPadding.set(horizontal: 21.0, vertical: 20.0),
     this.enabled = true,
     this.showCursor = true,
     this.readOnly = false,
@@ -103,12 +97,15 @@ class MTextFiled extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       children: [
         if (title != null)
-          MText(
-            text: title,
-            size: textSize,
-            weight: titleWeight ?? FontWeight.w400,
-            color: titleColor,
-          ).addPadding(bottom: 16.0),
+          Padding(
+            padding: titlePadding ?? const MPadding.set(bottom: 16.0),
+            child: MText(
+              text: title,
+              size: textSize,
+              weight: titleWeight ?? FontWeight.w400,
+              color: titleColor,
+            ),
+          ),
         Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           textDirection: textAlign == TextAlign.left
@@ -152,6 +149,7 @@ class MTextFiled extends StatelessWidget {
                   color: textColor,
                   fontFamily: fontFamily,
                   decoration: textDecoration,
+                  fontWeight: textWeight,
                 ),
                 decoration: InputDecoration(
                   focusedBorder: border?.copyWith(
@@ -165,6 +163,7 @@ class MTextFiled extends StatelessWidget {
                     fontFamily: fontFamily,
                     color: labelColor,
                     decoration: textDecoration,
+                    fontWeight: lableWeight,
                   ),
                   border: border,
                   enabledBorder: border,
@@ -176,17 +175,13 @@ class MTextFiled extends StatelessWidget {
                   hintText: hintText,
                   labelText: lableText,
                   hintStyle: TextStyle(
-                    fontSize: textSize - 2,
+                    fontSize: hintSize,
                     color: hintColor,
                     fontFamily: fontFamily,
                     decoration: textDecoration,
+                    fontWeight: hintWeight,
                   ),
-                  contentPadding: EdgeInsetsDirectional.only(
-                    start: paddingHorizontal,
-                    end: paddingHorizontal,
-                    bottom: paddingVertical,
-                    top: paddingVertical,
-                  ),
+                  contentPadding: contentPadding,
                 ),
               ),
             ),
