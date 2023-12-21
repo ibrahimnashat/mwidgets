@@ -8,7 +8,7 @@ class MText extends StatelessWidget {
   final String? text;
   final Color color;
   final double size;
-  String? fontFamily;
+  final String? fontFamily;
   final int? maxLines;
   final TextAlign? align;
   final double? maxWidth;
@@ -17,7 +17,7 @@ class MText extends StatelessWidget {
   final FontWeight? weight;
   final Key? mKey;
 
-  MText({
+  const MText({
     Key? key,
     this.text = "",
     this.fontFamily,
@@ -30,23 +30,21 @@ class MText extends StatelessWidget {
     this.maxWidth,
     this.height,
     this.decoration = TextDecoration.none,
-  }) : super(key: key) {
-    ttext = (text ?? "").replaceAll('null', '');
-  }
-
-  late String ttext;
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    fontFamily ??= context.isEn ? FoontFamily.enFont : FoontFamily.arFont;
+    var text1 = (text ?? "").replaceAll('null', '');
+    var font = fontFamily ??
+        (isArabic(text1) ? FoontFamily.arFont : FoontFamily.enFont);
     return SizedBox(
       key: mKey,
       width: maxWidth,
       child: Text(
-        ttext,
+        text1,
         style: TextStyle(
           color: color,
-          fontFamily: fontFamily,
+          fontFamily: font,
           fontSize: size,
           decoration: decoration,
           decorationStyle: TextDecorationStyle.solid,
@@ -59,6 +57,15 @@ class MText extends StatelessWidget {
         textAlign: align,
       ),
     );
+  }
+
+  bool isArabic(String text) {
+    // Arabic Unicode character ranges
+    final arabicRegex = RegExp(
+        r'[\u0600-\u06FF\u0750-\u077F\u08A0-\u08FF\uFB50-\uFDFF\uFE70-\uFEFF]');
+
+    // Check if the string contains Arabic characters
+    return arabicRegex.hasMatch(text);
   }
 }
 
