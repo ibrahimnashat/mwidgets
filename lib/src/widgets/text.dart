@@ -12,6 +12,7 @@ class MText extends StatelessWidget {
   final int? maxLines;
   final TextAlign? align;
   final double? maxWidth;
+  final double? height;
   final TextDecoration decoration;
   final FontWeight? weight;
   final Key? mKey;
@@ -27,6 +28,7 @@ class MText extends StatelessWidget {
     this.maxLines,
     this.align,
     this.maxWidth,
+    this.height,
     this.decoration = TextDecoration.none,
   }) : super(key: key) {
     ttext = (text ?? "").replaceAll('null', '');
@@ -49,7 +51,7 @@ class MText extends StatelessWidget {
           decoration: decoration,
           decorationStyle: TextDecorationStyle.solid,
           decorationThickness: 1.4,
-          height: 1.3,
+          height: height ?? 1.3,
           fontWeight: weight ?? FontWeight.w300,
         ),
         maxLines: maxLines,
