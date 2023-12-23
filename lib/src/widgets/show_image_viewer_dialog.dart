@@ -20,7 +20,10 @@ void showImageDialog(BuildContext context, String item) {
                   if (item.contains('http'))
                     PhotoView(imageProvider: NetworkImage(item))
                   else
-                    PhotoView(imageProvider: FileImage(File(item))),
+                    if (item.contains('asset'))
+                      PhotoView(imageProvider: AssetImage(item))
+                    else
+                      PhotoView(imageProvider: FileImage(File(item))),
                   Positioned(
                     top: 10,
                     right: 10,
