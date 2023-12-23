@@ -12,10 +12,12 @@ class MRatingItem extends StatelessWidget {
   final bool ignoreGestures;
   final bool oneStar;
   final Function(double value) onRatingUpdate;
+  final EdgeInsetsGeometry? padding;
 
   const MRatingItem({
     super.key,
     this.rating = 4.5,
+    this.padding,
     this.size = 18.0,
     this.ignoreGestures = true,
     this.oneStar = true,
@@ -32,12 +34,15 @@ class MRatingItem extends StatelessWidget {
             color: Coolors.orange,
             size: size,
           ).addPadding(end: 3.0),
-          MText(
-            text: '$rating',
-            size: FoontSize.font12,
-            color: Coolors.orange,
-            weight: FontWeight.w500,
-          ).addPadding(top: 6.0)
+          Padding(
+            padding: padding ?? const MPadding.set(top: 6.0),
+            child: MText(
+              text: '$rating',
+              size: FoontSize.font12,
+              color: Coolors.orange,
+              weight: FontWeight.w500,
+            ),
+          )
         ],
       );
     }

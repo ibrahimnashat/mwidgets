@@ -12,6 +12,8 @@ void showMBottomSheet({
   String? title,
   bool noScrolling = false,
   bool removeTransparentBackground = false,
+  BorderRadiusGeometry? borderRadius,
+  EdgeInsetsGeometry? padding,
 }) {
   showModalBottomSheet(
     enableDrag: true,
@@ -37,14 +39,13 @@ void showMBottomSheet({
                   minWidth: context.width,
                 ),
                 margin: const EdgeInsets.all(2.0),
-                padding: const EdgeInsetsDirectional.only(
-                  top: 30.0,
-                ),
+                padding: padding ?? const EdgeInsetsDirectional.only(top: 30.0),
                 decoration: BoxDecoration(
                   color: Colors.white,
-                  borderRadius: const BorderRadius.vertical(
-                    top: Radius.circular(30.0),
-                  ),
+                  borderRadius: borderRadius ??
+                      const BorderRadius.vertical(
+                        top: Radius.circular(30.0),
+                      ),
                   boxShadow: removeTransparentBackground
                       ? null
                       : [
