@@ -64,8 +64,8 @@ class MPinput extends StatelessWidget {
     fontFamily ??= FoontFamily.enFont;
 
     final defaultPinTheme = PinTheme(
-      width: 60,
-      height: 60,
+      width: width,
+      height: height,
       textStyle: TextStyle(
         fontSize: textSize,
         color: textColor,
