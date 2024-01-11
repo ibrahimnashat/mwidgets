@@ -1,5 +1,6 @@
 // ignore_for_file: must_be_immutable
 
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:mwidgets/mwidgets.dart';
 import 'package:mwidgets/src/consts/font_families.dart';
@@ -40,7 +41,7 @@ class MText extends StatelessWidget {
     return SizedBox(
       key: mKey,
       width: maxWidth,
-      child: Text(
+      child: AutoSizeText(
         text1,
         style: TextStyle(
           color: color,

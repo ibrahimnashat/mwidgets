@@ -37,6 +37,7 @@ class MDropDown<T> extends StatefulWidget {
   final double borderRadius;
   final bool hideDropdown, isDense;
   final FontWeight? titleWeight, textWeight;
+  final AlignmentGeometry alignment;
 
   MDropDown({
     Key? key,
@@ -45,6 +46,7 @@ class MDropDown<T> extends StatefulWidget {
     this.inFill = true,
     this.prefix,
     this.menuMaxHeight,
+    this.alignment = AlignmentDirectional.centerStart,
     this.selectedItem,
     this.optionItem,
     this.dropdownPadding = const MPadding.set(horizontal: 21.0, vertical: 6.0),
@@ -186,6 +188,7 @@ class _MDropDownState<T> extends State<MDropDown<T>> {
                 return const SizedBox();
               }).toList();
             },
+            alignment: widget.alignment,
             items: widget.options.map((T item) {
               return DropdownMenuItem<T>(
                 value: item,
