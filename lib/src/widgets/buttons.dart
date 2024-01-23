@@ -71,31 +71,31 @@ class MBouncingButton extends StatelessWidget {
         color: buttonType == ButtonType.filled ? color : null,
         borderRadius: BorderRadius.circular(borderRadius),
         border:
-            buttonType == ButtonType.outline ? Border.all(color: color) : null,
+        buttonType == ButtonType.outline ? Border.all(color: color) : null,
         gradient: buttonType == ButtonType.filled ? gradient : null,
       ),
       child: !willAnimated
           ? Row(
-              textDirection: textDirection,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                if (icon != null)
-                  MSvg(
-                    name: icon,
-                    color: iconTransparent ? null : textColor,
-                    height: iconSize,
-                    width: iconSize,
-                  ).addPadding(end: 10.0),
-                if (title != null)
-                  MText(
-                    text: title,
-                    align: TextAlign.center,
-                    color: textColor!,
-                    size: textSize!,
-                    weight: weight,
-                  ),
-              ],
-            ).addPadding(horizontal: 12.0)
+        textDirection: textDirection,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          if (icon != null)
+            MSvg(
+              name: icon,
+              color: iconTransparent ? null : textColor,
+              height: iconSize,
+              width: iconSize,
+            ).addPadding(horizontal: 10.0),
+          if (title != null)
+            MText(
+              text: title,
+              align: TextAlign.center,
+              color: textColor!,
+              size: textSize!,
+              weight: weight,
+            ),
+        ],
+      ).addPadding(horizontal: 12.0)
           : null,
     );
     if (bouncing) {
@@ -356,10 +356,10 @@ class _MAnimatedButtonState extends State<MAnimatedButton>
   void done() async {
     final scaleWidth = width * 1.1;
     tweenButton =
-        Tween<double>(begin: width, end: scaleWidth).animate(controllerScale)
-          ..addListener(() {
-            setState(() {});
-          });
+    Tween<double>(begin: width, end: scaleWidth).animate(controllerScale)
+      ..addListener(() {
+        setState(() {});
+      });
     await controllerScale.forward();
     tweenButton = Tween<double>(begin: scaleWidth, end: 30).animate(controller)
       ..addListener(() {
