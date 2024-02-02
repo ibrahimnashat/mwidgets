@@ -17,6 +17,7 @@ class MText extends StatelessWidget {
   final TextDecoration decoration;
   final FontWeight? weight;
   final Key? mKey;
+  final TextDirection? direction;
 
   const MText({
     Key? key,
@@ -30,6 +31,7 @@ class MText extends StatelessWidget {
     this.align,
     this.maxWidth,
     this.height,
+    this.direction,
     this.decoration = TextDecoration.none,
   }) : super(key: key);
 
@@ -56,6 +58,7 @@ class MText extends StatelessWidget {
         maxLines: maxLines,
         overflow: maxLines != null ? TextOverflow.ellipsis : null,
         textAlign: align,
+        textDirection: direction,
       ),
     );
   }
