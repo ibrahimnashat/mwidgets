@@ -9,10 +9,10 @@ class MTitleDividerItemWidget extends StatelessWidget {
   final double textSize;
 
   const MTitleDividerItemWidget({
-    super.key,
+    Key? key,
     required this.title,
     this.textSize = FoontSize.font18,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

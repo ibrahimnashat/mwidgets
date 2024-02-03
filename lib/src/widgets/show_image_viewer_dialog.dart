@@ -1,10 +1,16 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:image_zoom_on_move/image_zoom_on_move.dart';
 import 'package:mwidgets/src/extensions/context.dart';
-import 'package:photo_view/photo_view.dart';
 
-void showImageDialog(BuildContext context, String item) {
+void showImageDialog(
+  BuildContext context,
+  String item, {
+  double width = 500,
+  double height = 500,
+  MouseCursor? cursor = SystemMouseCursors.zoomIn,
+}) {
   showDialog(
     context: context,
     builder: (BuildContext context) {
@@ -18,12 +24,38 @@ void showImageDialog(BuildContext context, String item) {
               child: Stack(
                 children: [
                   if (item.contains('http'))
-                    PhotoView(imageProvider: NetworkImage(item))
+                    ImageZoomOnMove(
+                      cursor: cursor,
+                      width: width,
+                      height: height,
+                      onTap: () {},
+                      image: Image.network(
+                        item,
+                        fit: BoxFit.cover,
+                      ),
+                    )
+                  else if (item.contains('asset'))
+                    ImageZoomOnMove(
+                      onTap: () {},
+                      cursor: cursor,
+                      width: width,
+                      height: height,
+                      image: Image.asset(
+                        item,
+                        fit: BoxFit.cover,
+                      ),
+                    )
                   else
-                    if (item.contains('asset'))
-                      PhotoView(imageProvider: AssetImage(item))
-                    else
-                      PhotoView(imageProvider: FileImage(File(item))),
+                    ImageZoomOnMove(
+                      width: width,
+                      height: height,
+                      cursor: cursor,
+                      onTap: () {},
+                      image: Image.file(
+                        File(item),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
                   Positioned(
                     top: 10,
                     right: 10,

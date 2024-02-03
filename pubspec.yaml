@@ -28,7 +28,7 @@ dependencies:
   skeletons: ^0.0.3
   cupertino_range_slider_improved: ^2.0.1
   phone_number: ^2.0.1
-  photo_view: ^0.14.0
+  image_zoom_on_move: ^1.0.0
   auto_size_text: ^3.0.0
 
 dev_dependencies:
