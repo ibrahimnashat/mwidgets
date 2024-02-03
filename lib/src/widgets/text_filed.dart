@@ -33,12 +33,16 @@ class MTextFiled extends StatelessWidget {
   final TextDecoration? textDecoration;
   final Key? mKey;
   final FontWeight? titleWeight, lableWeight, textWeight, hintWeight;
-
+  final TextStyle? hintStyle, labelStyle, textStyle, titleStyle;
   final String? Function(String? valid)? validator;
 
   MTextFiled({
     super.key,
     this.mKey,
+    this.hintStyle,
+    this.labelStyle,
+    this.textStyle,
+    this.titleStyle,
     this.textAlign = TextAlign.start,
     this.validator,
     this.controller,
@@ -104,6 +108,7 @@ class MTextFiled extends StatelessWidget {
               size: textSize,
               weight: titleWeight ?? FontWeight.w400,
               color: titleColor,
+              style: titleStyle,
             ),
           ),
         Row(
@@ -144,13 +149,14 @@ class MTextFiled extends StatelessWidget {
                 validator: validator,
                 inputFormatters: inputFiltering
                   ?..add(LengthLimitingTextInputFormatter(maxLength)),
-                style: TextStyle(
-                  fontSize: textSize,
-                  color: textColor,
-                  fontFamily: fontFamily,
-                  decoration: textDecoration,
-                  fontWeight: textWeight,
-                ),
+                style: textStyle ??
+                    TextStyle(
+                      fontSize: textSize,
+                      color: textColor,
+                      fontFamily: fontFamily,
+                      decoration: textDecoration,
+                      fontWeight: textWeight,
+                    ),
                 decoration: InputDecoration(
                   focusedBorder: border?.copyWith(
                     borderSide: BorderSide(
@@ -158,13 +164,14 @@ class MTextFiled extends StatelessWidget {
                       width: 1.5,
                     ),
                   ),
-                  labelStyle: TextStyle(
-                    fontSize: textSize,
-                    fontFamily: fontFamily,
-                    color: labelColor,
-                    decoration: textDecoration,
-                    fontWeight: lableWeight,
-                  ),
+                  labelStyle: labelStyle ??
+                      TextStyle(
+                        fontSize: textSize,
+                        fontFamily: fontFamily,
+                        color: labelColor,
+                        decoration: textDecoration,
+                        fontWeight: lableWeight,
+                      ),
                   border: border,
                   enabledBorder: border,
                   disabledBorder: border,
@@ -174,13 +181,14 @@ class MTextFiled extends StatelessWidget {
                   fillColor: fillColor,
                   hintText: hintText,
                   labelText: lableText,
-                  hintStyle: TextStyle(
-                    fontSize: hintSize,
-                    color: hintColor,
-                    fontFamily: fontFamily,
-                    decoration: textDecoration,
-                    fontWeight: hintWeight,
-                  ),
+                  hintStyle: hintStyle ??
+                      TextStyle(
+                        fontSize: hintSize,
+                        color: hintColor,
+                        fontFamily: fontFamily,
+                        decoration: textDecoration,
+                        fontWeight: hintWeight,
+                      ),
                   contentPadding: contentPadding,
                 ),
               ),

@@ -34,9 +34,11 @@ class MBouncingButton extends StatelessWidget {
   final Key? mKey;
   final bool bouncing;
   final FontWeight weight;
+  final TextStyle? titleStyle;
 
   MBouncingButton({
     Key? key,
+    this.titleStyle,
     this.mKey,
     this.textColor,
     this.buttonType = ButtonType.filled,
@@ -71,31 +73,32 @@ class MBouncingButton extends StatelessWidget {
         color: buttonType == ButtonType.filled ? color : null,
         borderRadius: BorderRadius.circular(borderRadius),
         border:
-        buttonType == ButtonType.outline ? Border.all(color: color) : null,
+            buttonType == ButtonType.outline ? Border.all(color: color) : null,
         gradient: buttonType == ButtonType.filled ? gradient : null,
       ),
       child: !willAnimated
           ? Row(
-        textDirection: textDirection,
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          if (icon != null)
-            MSvg(
-              name: icon,
-              color: iconTransparent ? null : textColor,
-              height: iconSize,
-              width: iconSize,
-            ).addPadding(horizontal: 10.0),
-          if (title != null)
-            MText(
-              text: title,
-              align: TextAlign.center,
-              color: textColor!,
-              size: textSize!,
-              weight: weight,
-            ),
-        ],
-      ).addPadding(horizontal: 12.0)
+              textDirection: textDirection,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                if (icon != null)
+                  MSvg(
+                    name: icon,
+                    color: iconTransparent ? null : textColor,
+                    height: iconSize,
+                    width: iconSize,
+                  ).addPadding(horizontal: 10.0),
+                if (title != null)
+                  MText(
+                    text: title,
+                    style: titleStyle,
+                    align: TextAlign.center,
+                    color: textColor!,
+                    size: textSize!,
+                    weight: weight,
+                  ),
+              ],
+            ).addPadding(horizontal: 12.0)
           : null,
     );
     if (bouncing) {
@@ -265,6 +268,7 @@ class MProgressButton extends StatelessWidget {
   final Function onTap;
   final double progress;
   final Key? mKey;
+  final TextStyle? titleStyle;
 
   const MProgressButton({
     super.key,
@@ -272,6 +276,7 @@ class MProgressButton extends StatelessWidget {
     this.progress = 0.36,
     this.title,
     this.mKey,
+    this.titleStyle,
   });
 
   @override
@@ -308,6 +313,7 @@ class MProgressButton extends StatelessWidget {
         if (title != null)
           MText(
             text: title,
+            style: titleStyle,
             color: Coolors.primaryColor,
             size: FoontSize.font15,
           ).addPadding(bottom: 50.0),
@@ -356,10 +362,10 @@ class _MAnimatedButtonState extends State<MAnimatedButton>
   void done() async {
     final scaleWidth = width * 1.1;
     tweenButton =
-    Tween<double>(begin: width, end: scaleWidth).animate(controllerScale)
-      ..addListener(() {
-        setState(() {});
-      });
+        Tween<double>(begin: width, end: scaleWidth).animate(controllerScale)
+          ..addListener(() {
+            setState(() {});
+          });
     await controllerScale.forward();
     tweenButton = Tween<double>(begin: scaleWidth, end: 30).animate(controller)
       ..addListener(() {
@@ -408,6 +414,7 @@ class MOutlineButton extends StatelessWidget {
   final double titleSize;
   final String? icon, title;
   final Function onTap;
+  final TextStyle? titleStyle;
 
   const MOutlineButton({
     Key? key,
@@ -419,6 +426,7 @@ class MOutlineButton extends StatelessWidget {
     this.iconColor = Coolors.black,
     this.icon,
     this.title,
+    this.titleStyle,
     this.titleSize = 20.0,
     required this.onTap,
   }) : super(key: key);
@@ -447,6 +455,7 @@ class MOutlineButton extends StatelessWidget {
               color: textColor,
               weight: FontWeight.w400,
               size: titleSize,
+              style: titleStyle,
             ),
         ],
       ),

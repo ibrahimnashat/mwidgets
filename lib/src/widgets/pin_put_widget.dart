@@ -32,10 +32,14 @@ class MPinput extends StatelessWidget {
   final Key? mKey;
   final double width, height, borderRadius;
 
+  final TextStyle? titleStyle, inputStyle;
+
   MPinput({
     Key? key,
     this.mKey,
     this.validator,
+    this.titleStyle,
+    this.inputStyle,
     this.activeColor,
     this.unActiveColor,
     this.controller,
@@ -66,11 +70,12 @@ class MPinput extends StatelessWidget {
     final defaultPinTheme = PinTheme(
       width: width,
       height: height,
-      textStyle: TextStyle(
-        fontSize: textSize,
-        color: textColor,
-        fontFamily: fontFamily,
-      ),
+      textStyle: inputStyle ??
+          TextStyle(
+            fontSize: textSize,
+            color: textColor,
+            fontFamily: fontFamily,
+          ),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(borderRadius),
         border: Border.all(color: unActiveColor ?? Coolors.grey),
@@ -83,6 +88,7 @@ class MPinput extends StatelessWidget {
       children: [
         if (title != null)
           MText(
+            style: titleStyle,
             text: title,
             size: textSize,
             weight: FontWeight.w500,

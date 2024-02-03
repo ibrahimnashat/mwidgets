@@ -13,10 +13,12 @@ class MRatingItem extends StatelessWidget {
   final bool oneStar;
   final Function(double value) onRatingUpdate;
   final EdgeInsetsGeometry? padding;
+  final TextStyle? textStyle;
 
   const MRatingItem({
     super.key,
     this.rating = 4.5,
+    this.textStyle,
     this.padding,
     this.size = 18.0,
     this.ignoreGestures = true,
@@ -41,6 +43,7 @@ class MRatingItem extends StatelessWidget {
               size: FoontSize.font12,
               color: Coolors.orange,
               weight: FontWeight.w500,
+              style: textStyle,
             ),
           )
         ],

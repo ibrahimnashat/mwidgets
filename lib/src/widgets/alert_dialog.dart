@@ -22,6 +22,7 @@ showMCupertinoDialog({
   EdgeInsetsGeometry? margin,
   Gradient? gradient,
   Color? backgroundColor = Colors.white,
+  TextStyle? titleStyle,
 }) {
   return showCupertinoDialog(
     context: context,
@@ -58,6 +59,7 @@ showMCupertinoDialog({
                                       size: FoontSize.font22,
                                       weight: FontWeight.w800,
                                       color: titleColor,
+                                      style: titleStyle,
                                     ).addPadding(
                                       bottom: 30.0,
                                       top: topTitle != null ? 0 : 21.0,
