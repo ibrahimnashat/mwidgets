@@ -7,10 +7,12 @@ import 'package:mwidgets/src/widgets/text.dart';
 class MTitleDividerItemWidget extends StatelessWidget {
   final String title;
   final double textSize;
+  final TextStyle? style;
 
   const MTitleDividerItemWidget({
     Key? key,
     required this.title,
+    this.style,
     this.textSize = FoontSize.font18,
   }) : super(key: key);
 
@@ -22,6 +24,7 @@ class MTitleDividerItemWidget extends StatelessWidget {
         MText(
           text: title,
           size: textSize,
+          style: style,
         ).addPadding(horizontal: 21.0),
         const Expanded(child: MDividerItemWidget()),
       ],

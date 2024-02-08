@@ -32,11 +32,13 @@ class MDropDown<T> extends StatefulWidget {
   final bool inFill;
   final Widget Function(T? itemImage)? prefix, selectedItem, optionItem;
 
+  final TextStyle? titleStyle, hintStyle, optionStyle, selectedStyle;
   final double iconSize;
   final int elevation;
   final double borderRadius;
   final bool hideDropdown, isDense;
   final FontWeight? titleWeight, textWeight;
+  final AlignmentGeometry alignment;
 
   MDropDown({
     Key? key,
@@ -44,7 +46,12 @@ class MDropDown<T> extends StatefulWidget {
     required this.itemTitle,
     this.inFill = true,
     this.prefix,
+    this.titleStyle,
+    this.hintStyle,
+    this.optionStyle,
+    this.selectedStyle,
     this.menuMaxHeight,
+    this.alignment = AlignmentDirectional.centerStart,
     this.selectedItem,
     this.optionItem,
     this.dropdownPadding = const MPadding.set(horizontal: 21.0, vertical: 6.0),
@@ -111,6 +118,7 @@ class _MDropDownState<T> extends State<MDropDown<T>> {
               size: widget.titleSize,
               weight: widget.titleWeight,
               color: widget.titleColor ?? Coolors.primaryColor,
+              style: widget.titleStyle,
             ),
           ),
         Container(
@@ -155,6 +163,7 @@ class _MDropDownState<T> extends State<MDropDown<T>> {
                   color: widget.hintColor ?? Coolors.borderColor,
                   size: widget.textSize,
                   weight: widget.titleWeight,
+                  style: widget.hintStyle,
                   align: widget.isCenter ? TextAlign.center : TextAlign.start,
                 ).addPadding(bottom: widget.removeBorder ? 0 : 21.0),
               ],
@@ -175,6 +184,7 @@ class _MDropDownState<T> extends State<MDropDown<T>> {
                     children: [
                       if (widget.prefix != null) widget.prefix!(item),
                       MText(
+                        style: widget.selectedStyle,
                         color: widget.selectedItemColor ?? Coolors.black,
                         size: widget.textSize,
                         text: widget.itemTitle(item!),
@@ -186,6 +196,7 @@ class _MDropDownState<T> extends State<MDropDown<T>> {
                 return const SizedBox();
               }).toList();
             },
+            alignment: widget.alignment,
             items: widget.options.map((T item) {
               return DropdownMenuItem<T>(
                 value: item,
@@ -195,6 +206,7 @@ class _MDropDownState<T> extends State<MDropDown<T>> {
                         children: [
                           if (widget.prefix != null) widget.prefix!(item),
                           MText(
+                            style: widget.optionStyle,
                             color: widget.textColor ?? Coolors.black,
                             size: widget.textSize,
                             text: widget.itemTitle(item),

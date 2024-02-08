@@ -13,11 +13,13 @@ class MRadioItemWidget extends StatelessWidget {
   final FontWeight? fontWeight;
   final Widget? child;
   final bool selected;
+  final TextStyle? titleStyle;
 
   const MRadioItemWidget({
     Key? key,
     this.title,
     this.child,
+    this.titleStyle,
     this.value,
     this.groupValue,
     this.fontWeight,
@@ -56,6 +58,7 @@ class MRadioItemWidget extends StatelessWidget {
             color: fontColor,
             size: fontSize,
             weight: fontWeight,
+            style: titleStyle,
           )
       ],
     );

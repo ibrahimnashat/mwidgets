@@ -19,6 +19,8 @@ class MPinput extends StatelessWidget {
   final double textSize;
   final Color hintColor;
   final Color textColor;
+  final Color? activeColor;
+  final Color? unActiveColor;
   String? fontFamily;
   final bool enabled;
   final ValueChanged<String>? onChanged;
@@ -28,11 +30,18 @@ class MPinput extends StatelessWidget {
   final TextInputAction? textInputAction;
   final String? Function(String? valid)? validator;
   final Key? mKey;
+  final double width, height, borderRadius;
+
+  final TextStyle? titleStyle, inputStyle;
 
   MPinput({
     Key? key,
     this.mKey,
     this.validator,
+    this.titleStyle,
+    this.inputStyle,
+    this.activeColor,
+    this.unActiveColor,
     this.controller,
     this.textInputAction,
     this.focusNode,
@@ -49,6 +58,9 @@ class MPinput extends StatelessWidget {
     this.keyboardType = TextInputType.name,
     this.obscureText = false,
     this.onChanged,
+    this.width = 60.0,
+    this.height = 60.0,
+    this.borderRadius = 16.0,
   }) : super(key: key);
 
   @override
@@ -56,16 +68,17 @@ class MPinput extends StatelessWidget {
     fontFamily ??= FoontFamily.enFont;
 
     final defaultPinTheme = PinTheme(
-      width: 60,
-      height: 60,
-      textStyle: TextStyle(
-        fontSize: textSize,
-        color: textColor,
-        fontFamily: fontFamily,
-      ),
+      width: width,
+      height: height,
+      textStyle: inputStyle ??
+          TextStyle(
+            fontSize: textSize,
+            color: textColor,
+            fontFamily: fontFamily,
+          ),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(16.0),
-        border: Border.all(color: Coolors.grey),
+        borderRadius: BorderRadius.circular(borderRadius),
+        border: Border.all(color: unActiveColor ?? Coolors.grey),
         color: fillColor,
       ),
     );
@@ -75,6 +88,7 @@ class MPinput extends StatelessWidget {
       children: [
         if (title != null)
           MText(
+            style: titleStyle,
             text: title,
             size: textSize,
             weight: FontWeight.w500,
@@ -86,8 +100,8 @@ class MPinput extends StatelessWidget {
             key: mKey,
             focusedPinTheme: defaultPinTheme.copyWith(
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(16.0),
-                border: Border.all(color: Coolors.primaryColor),
+                borderRadius: BorderRadius.circular(borderRadius),
+                border: Border.all(color: activeColor ?? Coolors.primaryColor),
                 color: fillColor,
               ),
             ),

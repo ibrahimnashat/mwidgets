@@ -10,11 +10,14 @@ class MRangeItemWidget extends StatelessWidget {
   final MRangeItemWidgetCubit cubit;
   final Function(double value) onMinChanged, onMaxChanged;
   final Key? mKey;
+  final TextStyle? minStyle, maxStyle;
 
   MRangeItemWidget({
     Key? key,
     required this.min,
     required this.max,
+    this.minStyle,
+    this.maxStyle,
     required this.onMinChanged,
     required this.onMaxChanged,
     required this.cubit,
@@ -34,8 +37,14 @@ class MRangeItemWidget extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  MText(text: cubit.minValue.toInt().toString()),
-                  MText(text: cubit.maxValue.toInt().toString()),
+                  MText(
+                    text: cubit.minValue.toInt().toString(),
+                    style: minStyle,
+                  ),
+                  MText(
+                    text: cubit.maxValue.toInt().toString(),
+                    style: maxStyle,
+                  ),
                 ],
               ),
               Row(

@@ -20,6 +20,9 @@ showMCupertinoDialog({
   Function? onTap,
   BorderRadiusGeometry? borderRadius,
   EdgeInsetsGeometry? margin,
+  Gradient? gradient,
+  Color? backgroundColor = Colors.white,
+  TextStyle? titleStyle,
 }) {
   return showCupertinoDialog(
     context: context,
@@ -38,7 +41,8 @@ showMCupertinoDialog({
                   child: Container(
                     margin: margin ?? const EdgeInsets.all(24.0),
                     decoration: BoxDecoration(
-                      color: Colors.white,
+                      color: gradient == null ? backgroundColor : null,
+                      gradient: gradient,
                       borderRadius: borderRadius ?? BorderRadius.circular(50.0),
                     ),
                     child: Column(
@@ -55,6 +59,7 @@ showMCupertinoDialog({
                                       size: FoontSize.font22,
                                       weight: FontWeight.w800,
                                       color: titleColor,
+                                      style: titleStyle,
                                     ).addPadding(
                                       bottom: 30.0,
                                       top: topTitle != null ? 0 : 21.0,

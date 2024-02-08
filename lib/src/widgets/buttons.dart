@@ -34,9 +34,11 @@ class MBouncingButton extends StatelessWidget {
   final Key? mKey;
   final bool bouncing;
   final FontWeight weight;
+  final TextStyle? titleStyle;
 
   MBouncingButton({
     Key? key,
+    this.titleStyle,
     this.mKey,
     this.textColor,
     this.buttonType = ButtonType.filled,
@@ -85,10 +87,11 @@ class MBouncingButton extends StatelessWidget {
                     color: iconTransparent ? null : textColor,
                     height: iconSize,
                     width: iconSize,
-                  ).addPadding(end: 10.0),
+                  ).addPadding(horizontal: 10.0),
                 if (title != null)
                   MText(
                     text: title,
+                    style: titleStyle,
                     align: TextAlign.center,
                     color: textColor!,
                     size: textSize!,
@@ -265,6 +268,7 @@ class MProgressButton extends StatelessWidget {
   final Function onTap;
   final double progress;
   final Key? mKey;
+  final TextStyle? titleStyle;
 
   const MProgressButton({
     super.key,
@@ -272,6 +276,7 @@ class MProgressButton extends StatelessWidget {
     this.progress = 0.36,
     this.title,
     this.mKey,
+    this.titleStyle,
   });
 
   @override
@@ -308,6 +313,7 @@ class MProgressButton extends StatelessWidget {
         if (title != null)
           MText(
             text: title,
+            style: titleStyle,
             color: Coolors.primaryColor,
             size: FoontSize.font15,
           ).addPadding(bottom: 50.0),
@@ -408,6 +414,7 @@ class MOutlineButton extends StatelessWidget {
   final double titleSize;
   final String? icon, title;
   final Function onTap;
+  final TextStyle? titleStyle;
 
   const MOutlineButton({
     Key? key,
@@ -419,6 +426,7 @@ class MOutlineButton extends StatelessWidget {
     this.iconColor = Coolors.black,
     this.icon,
     this.title,
+    this.titleStyle,
     this.titleSize = 20.0,
     required this.onTap,
   }) : super(key: key);
@@ -447,6 +455,7 @@ class MOutlineButton extends StatelessWidget {
               color: textColor,
               weight: FontWeight.w400,
               size: titleSize,
+              style: titleStyle,
             ),
         ],
       ),
