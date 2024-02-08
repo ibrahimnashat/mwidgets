@@ -36,29 +36,37 @@ class MText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    if (maxWidth != null) {
+      return ConstrainedBox(
+        key: mKey,
+        constraints: BoxConstraints(maxWidth: maxWidth!),
+        child: mText(context),
+      );
+    } else {
+      return mText(context);
+    }
+  }
+
+  Widget mText(BuildContext context) {
     var text1 = (text ?? "").replaceAll('null', '');
     var font = fontFamily ??
         (isArabic(text1) ? FoontFamily.arFont : FoontFamily.enFont);
-    return SizedBox(
-      key: mKey,
-      width: maxWidth,
-      child: Text(
-        text1,
-        style: TextStyle(
-          color: color,
-          fontFamily: font,
-          fontSize: size,
-          decoration: decoration,
-          decorationStyle: TextDecorationStyle.solid,
-          decorationThickness: 1.4,
-          height: height ?? 1.3,
-          fontWeight: weight ?? FontWeight.w300,
-        ),
-        maxLines: maxLines,
-        overflow: maxLines != null ? TextOverflow.ellipsis : null,
-        textAlign: align,
-        textDirection: direction,
+    return Text(
+      text1,
+      style: TextStyle(
+        color: color,
+        fontFamily: font,
+        fontSize: size,
+        decoration: decoration,
+        decorationStyle: TextDecorationStyle.solid,
+        decorationThickness: 1.4,
+        height: height ?? 1.3,
+        fontWeight: weight ?? FontWeight.w300,
       ),
+      maxLines: maxLines,
+      overflow: maxLines != null ? TextOverflow.ellipsis : null,
+      textAlign: align,
+      textDirection: direction,
     );
   }
 
