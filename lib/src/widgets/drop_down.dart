@@ -100,6 +100,10 @@ class _MDropDownState<T> extends State<MDropDown<T>> {
         item = widget.setInitial;
         widget.onChanged(item);
       }
+      if (!items.value.contains(item)) {
+        item = null;
+        setState(() {});
+      }
     });
     super.initState();
   }
