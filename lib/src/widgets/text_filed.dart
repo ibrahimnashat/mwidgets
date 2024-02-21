@@ -15,7 +15,7 @@ class MTextFiled extends StatelessWidget {
   final TextEditingController? controller;
   final int? maxLength, maxLines;
   final String? lableText, title;
-  final double textSize, hintSize;
+  final double textSize, hintSize,titleSize;
   String? hintText, fontFamily;
   Color? hintColor, labelColor, fillColor, activeBorderColor;
   final Color textColor, titleColor;
@@ -71,6 +71,7 @@ class MTextFiled extends StatelessWidget {
     this.labelColor = Colors.grey,
     this.titleColor = Colors.black,
     this.textSize = FoontSize.font19,
+    this.titleSize = FoontSize.font19,
     this.hintSize = FoontSize.font17,
     this.contentPadding = const MPadding.set(horizontal: 21.0, vertical: 20.0),
     this.enabled = true,
@@ -105,7 +106,7 @@ class MTextFiled extends StatelessWidget {
             padding: titlePadding ?? const MPadding.set(bottom: 16.0),
             child: MText(
               text: title,
-              size: textSize,
+              size: titleSize,
               weight: titleWeight ?? FontWeight.w400,
               color: titleColor,
               style: titleStyle,
