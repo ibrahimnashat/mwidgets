@@ -18,9 +18,10 @@ class MText extends StatelessWidget {
   final FontWeight? weight;
   final Key? mKey;
   final TextDirection? direction;
-  final TextStyle? style;
+  TextStyle? style;
+  final bool autoSized;
 
-  const MText({
+  MText({
     Key? key,
     this.text = "",
     this.fontFamily,
@@ -34,6 +35,7 @@ class MText extends StatelessWidget {
     this.maxWidth,
     this.height,
     this.direction,
+    this.autoSized = true,
     this.decoration = TextDecoration.none,
   }) : super(key: key);
 
@@ -54,19 +56,29 @@ class MText extends StatelessWidget {
     var text1 = (text ?? "").replaceAll('null', '');
     var font = fontFamily ??
         (isArabic(text1) ? FoontFamily.arFont : FoontFamily.enFont);
+    style ??= TextStyle(
+      color: color,
+      fontFamily: font,
+      fontSize: size,
+      decoration: decoration,
+      decorationStyle: TextDecorationStyle.solid,
+      decorationThickness: 1.4,
+      height: height ?? 1.3,
+      fontWeight: weight ?? FontWeight.w300,
+    );
+    if (!autoSized) {
+      return Text(
+        text1,
+        style: style,
+        maxLines: maxLines,
+        overflow: maxLines != null ? TextOverflow.ellipsis : null,
+        textAlign: align,
+        textDirection: direction,
+      );
+    }
     return AutoSizeText(
       text1,
-      style: style ??
-          TextStyle(
-            color: color,
-            fontFamily: font,
-            fontSize: size,
-            decoration: decoration,
-            decorationStyle: TextDecorationStyle.solid,
-            decorationThickness: 1.4,
-            height: height ?? 1.3,
-            fontWeight: weight ?? FontWeight.w300,
-          ),
+      style: style,
       maxLines: maxLines,
       overflow: maxLines != null ? TextOverflow.ellipsis : null,
       textAlign: align,
