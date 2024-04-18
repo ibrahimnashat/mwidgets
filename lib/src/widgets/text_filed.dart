@@ -15,7 +15,7 @@ class MTextFiled extends StatelessWidget {
   final TextEditingController? controller;
   final int? maxLength, maxLines;
   final String? lableText, title;
-  final double textSize, hintSize,titleSize;
+  final double textSize, hintSize, titleSize;
   String? hintText, fontFamily;
   Color? hintColor, labelColor, fillColor, activeBorderColor;
   final Color textColor, titleColor;
@@ -35,6 +35,7 @@ class MTextFiled extends StatelessWidget {
   final FontWeight? titleWeight, lableWeight, textWeight, hintWeight;
   final TextStyle? hintStyle, labelStyle, textStyle, titleStyle;
   final String? Function(String? valid)? validator;
+  final Function(String? valid)? onFieldSubmitted;
 
   MTextFiled({
     super.key,
@@ -45,6 +46,7 @@ class MTextFiled extends StatelessWidget {
     this.titleStyle,
     this.textAlign = TextAlign.start,
     this.validator,
+    this.onFieldSubmitted,
     this.controller,
     this.inputFiltering,
     this.lableWeight,
@@ -130,6 +132,7 @@ class MTextFiled extends StatelessWidget {
                 onTapOutside: (event) {
                   SystemChannels.textInput.invokeMethod('TextInput.hide');
                 },
+                onFieldSubmitted: onFieldSubmitted,
                 showCursor: showCursor,
                 readOnly: readOnly,
                 textInputAction: textInputAction,
