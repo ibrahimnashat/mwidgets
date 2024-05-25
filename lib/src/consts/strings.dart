@@ -5,6 +5,11 @@ import 'date_time.dart';
 extension OnString on String {
   String get toDateOnly => DateTime.tryParse(this)?.dateOnly ?? '';
 
+  String get toTimeAndDate => DateTime.tryParse(this)?.timeAndDate ?? '';
+
+  String get toNameOfDayAndMonthAndYear =>
+      DateTime.tryParse(this)?.nameOfDayAndMonthAndYear ?? '';
+
   String get toDateAndTime => DateTime.tryParse(this)?.nameOfDayAndMonth ?? '';
 
   String get toNameOfMonthAndTime =>
