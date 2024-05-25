@@ -6,12 +6,15 @@ import 'package:mwidgets/src/widgets/image.dart';
 import 'package:skeletons/skeletons.dart';
 
 class Loader {
-  static Widget loading() {
+  static Widget loading({
+    double width = 280.0,
+    double height = 280.0,
+  }) {
     return Center(
       child: MLottieImage(
         name: Jsons.loading,
-        width: 280.0,
-        height: 280.0,
+        width: width,
+        height: height,
       ),
     );
   }
