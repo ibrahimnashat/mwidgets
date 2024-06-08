@@ -23,6 +23,9 @@ extension OnDateTime on DateTime {
 
   String get nameOfDayAndMonth => DateFormat('EEEE, MMM dd').format(this);
 
+  String get nameOfDayAndMonthAndYear =>
+      DateFormat('EEEE, MMM dd yyyy').format(this);
+
   String get nameOfMonthAndTime => DateFormat('MMM dd hh:mm a').format(this);
 
   int get timeStamp => millisecondsSinceEpoch;
