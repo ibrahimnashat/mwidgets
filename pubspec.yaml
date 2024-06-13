@@ -11,7 +11,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  intl: ^0.18.1
+  intl: ^0.19.0
   flutter_svg: ^2.0.9
   cached_network_image: ^3.3.0
   eitherx: ^1.0.4
@@ -25,7 +25,7 @@ dependencies:
   easy_image_viewer: ^1.2.1
   flash: ^3.1.0
   square_percent_indicater: ^0.1.0
-  skeletons: ^0.0.3
+#  skeletons: ^0.0.3
   cupertino_range_slider_improved: ^2.0.1
   phone_number: ^2.0.1
   image_zoom_on_move: ^1.0.0
