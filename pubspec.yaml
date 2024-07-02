@@ -27,7 +27,7 @@ dependencies:
   square_percent_indicater: ^0.1.0
 #  skeletons: ^0.0.3
   cupertino_range_slider_improved: ^2.0.1
-  phone_number: ^2.0.1
+#  phone_number: ^2.0.1
   image_zoom_on_move: ^1.0.0
   auto_size_text: ^3.0.0
 
