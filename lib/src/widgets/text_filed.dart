@@ -36,10 +36,12 @@ class MTextFiled extends StatelessWidget {
   final TextStyle? hintStyle, labelStyle, textStyle, titleStyle;
   final String? Function(String? valid)? validator;
   final void Function(PointerDownEvent data)? onTapOutside;
+  final Function? onTap;
 
   MTextFiled({
     super.key,
     this.mKey,
+    this.onTap,
     this.hintStyle,
     this.onTapOutside,
     this.labelStyle,
@@ -134,6 +136,11 @@ class MTextFiled extends StatelessWidget {
                     onTapOutside!(event);
                   } else {
                     SystemChannels.textInput.invokeMethod('TextInput.hide');
+                  }
+                },
+                onTap: () {
+                  if (onTap != null) {
+                    onTap!();
                   }
                 },
                 showCursor: showCursor,
