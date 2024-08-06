@@ -398,12 +398,6 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "skeletons",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/skeletons-0.0.3",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
       "name": "sky_engine",
       "rootUri": "file:///Users/ibrahimnashaat/Documents/flutter/bin/cache/pkg/sky_engine",
       "packageUri": "lib/",
@@ -548,7 +542,7 @@
       "languageVersion": "3.0"
     }
   ],
-  "generated": "2024-08-06T18:27:16.318349Z",
+  "generated": "2024-08-06T18:49:44.068669Z",
   "generator": "pub",
   "generatorVersion": "3.4.4",
   "flutterRoot": "file:///Users/ibrahimnashaat/Documents/flutter",

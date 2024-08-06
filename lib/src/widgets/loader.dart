@@ -3,7 +3,7 @@ import 'package:mwidgets/src/consts/jsons.dart';
 import 'package:mwidgets/src/extensions/padding.dart';
 import 'package:mwidgets/src/extensions/radius.dart';
 import 'package:mwidgets/src/widgets/image.dart';
-import 'package:skeletons/skeletons.dart';
+import 'package:mwidgets/src/widgets/skeletons/skeletons.dart';
 
 class Loader {
   static Widget loading({
