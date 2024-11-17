@@ -3,283 +3,283 @@
   "packages": [
     {
       "name": "archive",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/archive-3.3.7",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/archive-3.3.7",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "args",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/args-2.4.2",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/args-2.4.2",
       "packageUri": "lib/",
       "languageVersion": "2.19"
     },
     {
       "name": "async",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/async-2.11.0",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/async-2.11.0",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
     {
       "name": "auto_size_text",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/auto_size_text-3.0.0",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/auto_size_text-3.0.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "bloc",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/bloc-8.1.2",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/bloc-8.1.2",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "boolean_selector",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/boolean_selector-2.1.1",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/boolean_selector-2.1.1",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
     {
       "name": "bouncing_widget",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/bouncing_widget-2.0.0",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/bouncing_widget-2.0.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "cached_network_image",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/cached_network_image-3.3.0",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/cached_network_image-3.3.0",
       "packageUri": "lib/",
       "languageVersion": "3.0"
     },
     {
       "name": "cached_network_image_platform_interface",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/cached_network_image_platform_interface-3.0.0",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/cached_network_image_platform_interface-3.0.0",
       "packageUri": "lib/",
       "languageVersion": "3.0"
     },
     {
       "name": "cached_network_image_web",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/cached_network_image_web-1.1.0",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/cached_network_image_web-1.1.0",
       "packageUri": "lib/",
       "languageVersion": "3.0"
     },
     {
       "name": "characters",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/characters-1.3.0",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/characters-1.3.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "clock",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/clock-1.1.1",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/clock-1.1.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "collection",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/collection-1.18.0",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/collection-1.18.0",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
     {
       "name": "convert",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/convert-3.1.1",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/convert-3.1.1",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
     {
       "name": "crypto",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/crypto-3.0.3",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/crypto-3.0.3",
       "packageUri": "lib/",
       "languageVersion": "2.19"
     },
     {
       "name": "cupertino_icons",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/cupertino_icons-1.0.5",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/cupertino_icons-1.0.5",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "cupertino_range_slider_improved",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/cupertino_range_slider_improved-2.0.1",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/cupertino_range_slider_improved-2.0.1",
       "packageUri": "lib/",
       "languageVersion": "2.15"
     },
     {
       "name": "easy_image_viewer",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/easy_image_viewer-1.2.1",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/easy_image_viewer-1.2.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "eitherx",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/eitherx-1.0.4",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/eitherx-1.0.4",
       "packageUri": "lib/",
       "languageVersion": "2.19"
     },
     {
       "name": "equatable",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/equatable-2.0.5",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/equatable-2.0.5",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "fake_async",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/fake_async-1.3.1",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/fake_async-1.3.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "ffi",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/ffi-2.0.2",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/ffi-2.0.2",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
     {
       "name": "file",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/file-6.1.4",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/file-6.1.4",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "flash",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/flash-3.1.0",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/flash-3.1.0",
       "packageUri": "lib/",
       "languageVersion": "3.2"
     },
     {
       "name": "flutter",
-      "rootUri": "file:///Users/ibrahimnashaat/Documents/flutter/packages/flutter",
+      "rootUri": "file:///C:/flutter/packages/flutter",
       "packageUri": "lib/",
       "languageVersion": "3.3"
     },
     {
       "name": "flutter_bloc",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/flutter_bloc-8.1.3",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_bloc-8.1.3",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "flutter_cache_manager",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/flutter_cache_manager-3.3.1",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_cache_manager-3.3.1",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
     {
       "name": "flutter_lints",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/flutter_lints-2.0.2",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_lints-2.0.2",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
     {
       "name": "flutter_localizations",
-      "rootUri": "file:///Users/ibrahimnashaat/Documents/flutter/packages/flutter_localizations",
+      "rootUri": "file:///C:/flutter/packages/flutter_localizations",
       "packageUri": "lib/",
       "languageVersion": "3.2"
     },
     {
       "name": "flutter_rating_bar",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/flutter_rating_bar-4.0.1",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_rating_bar-4.0.1",
       "packageUri": "lib/",
       "languageVersion": "2.14"
     },
     {
       "name": "flutter_svg",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/flutter_svg-2.0.9",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_svg-2.0.9",
       "packageUri": "lib/",
       "languageVersion": "2.19"
     },
     {
       "name": "flutter_test",
-      "rootUri": "file:///Users/ibrahimnashaat/Documents/flutter/packages/flutter_test",
+      "rootUri": "file:///C:/flutter/packages/flutter_test",
       "packageUri": "lib/",
       "languageVersion": "3.3"
     },
     {
       "name": "flutter_web_plugins",
-      "rootUri": "file:///Users/ibrahimnashaat/Documents/flutter/packages/flutter_web_plugins",
+      "rootUri": "file:///C:/flutter/packages/flutter_web_plugins",
       "packageUri": "lib/",
       "languageVersion": "3.2"
     },
     {
       "name": "http",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/http-1.1.0",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/http-1.1.0",
       "packageUri": "lib/",
       "languageVersion": "3.0"
     },
     {
       "name": "http_parser",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/http_parser-4.0.2",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/http_parser-4.0.2",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "image_zoom_on_move",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/image_zoom_on_move-1.0.0",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/image_zoom_on_move-1.0.0",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
     {
       "name": "intl",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/intl-0.19.0",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/intl-0.19.0",
       "packageUri": "lib/",
       "languageVersion": "3.0"
     },
     {
       "name": "js",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/js-0.6.7",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/js-0.6.7",
       "packageUri": "lib/",
       "languageVersion": "2.19"
     },
     {
       "name": "leak_tracker",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/leak_tracker-10.0.4",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/leak_tracker-10.0.4",
       "packageUri": "lib/",
       "languageVersion": "3.2"
     },
     {
       "name": "leak_tracker_flutter_testing",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/leak_tracker_flutter_testing-3.0.3",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/leak_tracker_flutter_testing-3.0.3",
       "packageUri": "lib/",
       "languageVersion": "3.2"
     },
     {
       "name": "leak_tracker_testing",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/leak_tracker_testing-3.0.1",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/leak_tracker_testing-3.0.1",
       "packageUri": "lib/",
       "languageVersion": "3.2"
     },
     {
       "name": "lints",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/lints-2.1.1",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/lints-2.1.1",
       "packageUri": "lib/",
       "languageVersion": "3.0"
     },
     {
       "name": "localization",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/localization-2.1.1",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/localization-2.1.1",
       "packageUri": "lib/",
       "languageVersion": "2.13"
     },
     {
       "name": "lottie",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/lottie-2.7.0",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/lottie-2.7.0",
       "packageUri": "lib/",
       "languageVersion": "3.1"
     },
     {
       "name": "matcher",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/matcher-0.12.16+1",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/matcher-0.12.16+1",
       "packageUri": "lib/",
       "languageVersion": "3.0"
     },
     {
       "name": "material_color_utilities",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/material_color_utilities-0.8.0",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/material_color_utilities-0.8.0",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
     {
       "name": "meta",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/meta-1.12.0",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/meta-1.12.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -291,247 +291,247 @@
     },
     {
       "name": "nested",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/nested-1.0.0",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/nested-1.0.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "octo_image",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/octo_image-2.0.0",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/octo_image-2.0.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "path",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/path-1.9.0",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/path-1.9.0",
       "packageUri": "lib/",
       "languageVersion": "3.0"
     },
     {
       "name": "path_parsing",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/path_parsing-1.0.1",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/path_parsing-1.0.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "path_provider",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/path_provider-2.1.0",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/path_provider-2.1.0",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
     {
       "name": "path_provider_android",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/path_provider_android-2.1.0",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/path_provider_android-2.1.0",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
     {
       "name": "path_provider_foundation",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/path_provider_foundation-2.3.0",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/path_provider_foundation-2.3.0",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
     {
       "name": "path_provider_linux",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/path_provider_linux-2.2.0",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/path_provider_linux-2.2.0",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
     {
       "name": "path_provider_platform_interface",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/path_provider_platform_interface-2.1.0",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/path_provider_platform_interface-2.1.0",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
     {
       "name": "path_provider_windows",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/path_provider_windows-2.2.0",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/path_provider_windows-2.2.0",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
     {
       "name": "petitparser",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/petitparser-5.4.0",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/petitparser-5.4.0",
       "packageUri": "lib/",
       "languageVersion": "2.19"
     },
     {
       "name": "phone_number",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/phone_number-2.0.1",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/phone_number-2.0.1",
       "packageUri": "lib/",
       "languageVersion": "3.0"
     },
     {
       "name": "pinput",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/pinput-3.0.1",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/pinput-3.0.1",
       "packageUri": "lib/",
       "languageVersion": "2.15"
     },
     {
       "name": "platform",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/platform-3.1.0",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/platform-3.1.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "plugin_platform_interface",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/plugin_platform_interface-2.1.5",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/plugin_platform_interface-2.1.5",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
     {
       "name": "pointycastle",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/pointycastle-3.7.3",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/pointycastle-3.7.3",
       "packageUri": "lib/",
       "languageVersion": "2.14"
     },
     {
       "name": "provider",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/provider-6.0.5",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/provider-6.0.5",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "rxdart",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/rxdart-0.27.7",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/rxdart-0.27.7",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "sky_engine",
-      "rootUri": "file:///Users/ibrahimnashaat/Documents/flutter/bin/cache/pkg/sky_engine",
+      "rootUri": "file:///C:/flutter/bin/cache/pkg/sky_engine",
       "packageUri": "lib/",
       "languageVersion": "3.2"
     },
     {
       "name": "smart_auth",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/smart_auth-1.1.1",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/smart_auth-1.1.1",
       "packageUri": "lib/",
       "languageVersion": "2.16"
     },
     {
       "name": "source_span",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/source_span-1.10.0",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/source_span-1.10.0",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
     {
       "name": "sqflite",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/sqflite-2.3.0",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/sqflite-2.3.0",
       "packageUri": "lib/",
       "languageVersion": "3.0"
     },
     {
       "name": "sqflite_common",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/sqflite_common-2.5.0",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/sqflite_common-2.5.0",
       "packageUri": "lib/",
       "languageVersion": "3.0"
     },
     {
       "name": "square_percent_indicater",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/square_percent_indicater-0.1.0",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/square_percent_indicater-0.1.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "stack_trace",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/stack_trace-1.11.1",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/stack_trace-1.11.1",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
     {
       "name": "stream_channel",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/stream_channel-2.1.2",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/stream_channel-2.1.2",
       "packageUri": "lib/",
       "languageVersion": "2.19"
     },
     {
       "name": "string_scanner",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/string_scanner-1.2.0",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/string_scanner-1.2.0",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
     {
       "name": "synchronized",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/synchronized-3.1.0",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/synchronized-3.1.0",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
     {
       "name": "term_glyph",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/term_glyph-1.2.1",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/term_glyph-1.2.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "test_api",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/test_api-0.7.0",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/test_api-0.7.0",
       "packageUri": "lib/",
       "languageVersion": "3.0"
     },
     {
       "name": "typed_data",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/typed_data-1.3.2",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/typed_data-1.3.2",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
     {
       "name": "universal_platform",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/universal_platform-1.0.0+1",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/universal_platform-1.0.0+1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "uuid",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/uuid-3.0.7",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/uuid-3.0.7",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "vector_graphics",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/vector_graphics-1.1.9+1",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/vector_graphics-1.1.9+1",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
     {
       "name": "vector_graphics_codec",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/vector_graphics_codec-1.1.9+1",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/vector_graphics_codec-1.1.9+1",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
     {
       "name": "vector_graphics_compiler",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/vector_graphics_compiler-1.1.9+1",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/vector_graphics_compiler-1.1.9+1",
       "packageUri": "lib/",
       "languageVersion": "2.19"
     },
     {
       "name": "vector_math",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/vector_math-2.1.4",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/vector_math-2.1.4",
       "packageUri": "lib/",
       "languageVersion": "2.14"
     },
     {
       "name": "vm_service",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/vm_service-14.2.1",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/vm_service-14.2.1",
       "packageUri": "lib/",
       "languageVersion": "3.3"
     },
     {
       "name": "win32",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/win32-5.0.6",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/win32-5.0.6",
       "packageUri": "lib/",
       "languageVersion": "3.0"
     },
     {
       "name": "xdg_directories",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/xdg_directories-1.0.1",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/xdg_directories-1.0.1",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
     {
       "name": "xml",
-      "rootUri": "file:///Users/ibrahimnashaat/.pub-cache/hosted/pub.dev/xml-6.3.0",
+      "rootUri": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache/hosted/pub.dev/xml-6.3.0",
       "packageUri": "lib/",
       "languageVersion": "2.19"
     },
@@ -542,10 +542,10 @@
       "languageVersion": "3.0"
     }
   ],
-  "generated": "2024-08-06T18:49:44.068669Z",
+  "generated": "2024-11-17T13:40:44.614487Z",
   "generator": "pub",
   "generatorVersion": "3.4.4",
-  "flutterRoot": "file:///Users/ibrahimnashaat/Documents/flutter",
+  "flutterRoot": "file:///C:/flutter",
   "flutterVersion": "3.22.3",
-  "pubCache": "file:///Users/ibrahimnashaat/.pub-cache"
+  "pubCache": "file:///C:/Users/IbrahimNashaat/AppData/Local/Pub/Cache"
 }

@@ -28,7 +28,7 @@ showMCupertinoDialog({
   return showCupertinoDialog(
     context: context,
     builder: (context) {
-      final child = Column(
+      var widget = Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           GestureDetector(
@@ -94,9 +94,9 @@ showMCupertinoDialog({
           color: Colors.white12,
           child: BackdropFilter(
             filter: ImageFilter.blur(sigmaX: 8.0, sigmaY: 8.0),
-            child: child,
+            child: widget,
           ),
-        ) : child,
+        ) : widget,
       );
     },
   );
