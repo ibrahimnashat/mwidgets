@@ -21,7 +21,6 @@ dependencies:
   bouncing_widget: ^2.0.0
   pinput: ^5.0.0
   flutter_rating_bar: ^4.0.1
-  lottie: ^3.2.0
   easy_image_viewer: ^1.5.1
   flash: ^3.1.1
   square_percent_indicater: ^0.1.0
