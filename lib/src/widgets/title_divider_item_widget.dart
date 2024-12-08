@@ -6,15 +6,19 @@ import 'package:mwidgets/src/widgets/text.dart';
 
 class MTitleDividerItemWidget extends StatelessWidget {
   final String title;
-  final double textSize;
+  final double textSize, space;
   final TextStyle? style;
+  final Color? color, textColor;
 
   const MTitleDividerItemWidget({
-    Key? key,
+    super.key,
     required this.title,
     this.style,
+    this.color,
+    this.textColor,
+    this.space = 21.0,
     this.textSize = FoontSize.font18,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -25,8 +29,13 @@ class MTitleDividerItemWidget extends StatelessWidget {
           text: title,
           size: textSize,
           style: style,
-        ).addPadding(horizontal: 21.0),
-        const Expanded(child: MDividerItemWidget()),
+          color: textColor ?? Colors.black,
+        ).addPadding(horizontal: space),
+        Expanded(
+          child: MDividerItemWidget(
+            color: color,
+          ),
+        ),
       ],
     );
   }
