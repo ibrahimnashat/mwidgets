@@ -24,7 +24,11 @@ class MTitleDividerItemWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        const Expanded(child: MDividerItemWidget()),
+        Expanded(
+          child: MDividerItemWidget(
+            color: color,
+          ),
+        ),
         MText(
           text: title,
           size: textSize,
