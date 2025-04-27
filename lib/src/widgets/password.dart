@@ -8,6 +8,7 @@ import '../consts/svgs.dart';
 class MPasswordWidget extends StatefulWidget {
   final Color? activeColor, unActiveColor;
   final double activeSize, unActiveSize;
+  final EdgeInsetsGeometry? padding;
   final Widget Function(Widget icon, bool hide) child;
 
   const MPasswordWidget({
@@ -17,6 +18,7 @@ class MPasswordWidget extends StatefulWidget {
     this.unActiveColor,
     this.activeSize = 30.0,
     this.unActiveSize = 30.0,
+    this.padding,
   });
 
   @override
@@ -33,12 +35,12 @@ class _MPasswordWidgetState extends State<MPasswordWidget> {
       color: hide ? widget.unActiveColor : widget.activeColor,
       width: hide ? widget.unActiveSize : widget.activeSize,
       height: hide ? widget.unActiveSize : widget.activeSize,
-    )
-        .addPadding(
-      horizontal: 20.0,
-      vertical: 12.0,
-    )
-        .addAction(
+    ).addAction(
+      padding: widget.padding ??
+          MPadding.set(
+            horizontal: 20.0,
+            vertical: 12.0,
+          ),
       onGesture: () {
         setState(() {
           hide = !hide;
