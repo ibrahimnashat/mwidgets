@@ -6,7 +6,6 @@ import 'package:mwidgets/src/consts/colors.dart';
 import 'package:mwidgets/src/consts/font_families.dart';
 import 'package:mwidgets/src/extensions/context.dart';
 import 'package:mwidgets/src/extensions/padding.dart';
-import 'package:mwidgets/src/extensions/widget.dart';
 import 'package:mwidgets/src/widgets/text.dart';
 
 import '../consts/font_sizes.dart';
@@ -15,7 +14,7 @@ class MTextFiled extends StatelessWidget {
   final TextEditingController? controller;
   final int? maxLength, maxLines;
   final String? lableText, title;
-  final double textSize, hintSize, titleSize;
+  final double textSize, hintSize, titleSize, labelSize;
   String? hintText, fontFamily;
   Color? hintColor, labelColor, fillColor, activeBorderColor;
   final Color textColor, titleColor;
@@ -76,6 +75,7 @@ class MTextFiled extends StatelessWidget {
     this.titleColor = Colors.black,
     this.textSize = FoontSize.font19,
     this.titleSize = FoontSize.font19,
+    this.labelSize = FoontSize.font19,
     this.hintSize = FoontSize.font17,
     this.contentPadding = const MPadding.set(horizontal: 21.0, vertical: 20.0),
     this.enabled = true,
@@ -91,15 +91,13 @@ class MTextFiled extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     inputFiltering ??= [];
-    fontFamily ??= context.isEn ? FoontFamily.enFont : FoontFamily.arFont;
     activeBorderColor ??= Coolors.primaryColor;
     hintColor ??= Coolors.highlight2;
     if (hintText == 'null') hintText = null;
+    fontFamily ??= context.isEn ? FoontFamily.enFont : FoontFamily.arFont;
     border ??= OutlineInputBorder(
       borderRadius: BorderRadius.circular(8.0),
-      borderSide: const BorderSide(
-        color: Coolors.highlight,
-      ),
+      borderSide: const BorderSide(color: Coolors.highlight),
     );
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -151,7 +149,7 @@ class MTextFiled extends StatelessWidget {
                 autovalidateMode: AutovalidateMode.onUserInteraction,
                 enableSuggestions: true,
                 textAlign: textAlign,
-                textAlignVertical: TextAlignVertical.top,
+                textAlignVertical: TextAlignVertical.center,
                 controller: controller,
                 enabled: enabled,
                 onChanged: onChanged,
@@ -159,7 +157,7 @@ class MTextFiled extends StatelessWidget {
                 maxLines: maxLines,
                 obscureText: obscureText,
                 cursorColor: Coolors.primaryColor,
-                cursorHeight: textSize * 1.4,
+                cursorHeight: textSize,
                 validator: validator,
                 inputFormatters: inputFiltering
                   ?..add(LengthLimitingTextInputFormatter(maxLength)),
@@ -180,7 +178,7 @@ class MTextFiled extends StatelessWidget {
                   ),
                   labelStyle: labelStyle ??
                       TextStyle(
-                        fontSize: textSize,
+                        fontSize: labelSize,
                         fontFamily: fontFamily,
                         color: labelColor,
                         decoration: textDecoration,
@@ -189,8 +187,14 @@ class MTextFiled extends StatelessWidget {
                   border: border,
                   enabledBorder: border,
                   disabledBorder: border,
-                  suffixIcon: suffix?.mNotStratch,
-                  prefixIcon: prefix?.mNotStratch.addPadding(start: 12),
+                  suffixIcon: Align(
+                    alignment: AlignmentDirectional.centerEnd,
+                    child: suffix,
+                  ),
+                  prefixIcon: Align(
+                    alignment: AlignmentDirectional.centerStart,
+                    child: prefix,
+                  ),
                   filled: fillColor != null,
                   fillColor: fillColor,
                   hintText: hintText,
@@ -208,7 +212,7 @@ class MTextFiled extends StatelessWidget {
               ),
             ),
           ],
-        ).addPadding(horizontal: 2.0),
+        ),
       ],
     );
   }
