@@ -151,6 +151,7 @@ class _MDropDownState<T> extends State<MDropDown<T>> {
             icon: widget.hideDropdown
                 ? const SizedBox()
                 : Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       MSvg(
                         name: Svgs.dropdown,
