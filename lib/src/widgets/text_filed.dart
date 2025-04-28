@@ -187,14 +187,18 @@ class MTextFiled extends StatelessWidget {
                   border: border,
                   enabledBorder: border,
                   disabledBorder: border,
-                  suffixIcon: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [if (suffix != null) suffix!],
-                  ),
-                  prefixIcon: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [if (prefix != null) prefix!],
-                  ),
+                  suffixIcon: suffix != null
+                      ? Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [suffix!],
+                        )
+                      : null,
+                  prefixIcon: prefix != null
+                      ? Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [prefix!],
+                        )
+                      : null,
                   filled: fillColor != null,
                   fillColor: fillColor,
                   hintText: hintText,
