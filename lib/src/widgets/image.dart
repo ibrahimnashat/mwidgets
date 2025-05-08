@@ -40,6 +40,7 @@ class MSvg extends StatelessWidget {
       fit: fit,
       color: color,
       key: mkey,
+      alignment: alignment,
     );
   }
 }
@@ -61,7 +62,7 @@ class MAssetImage extends StatelessWidget {
     this.width = 25,
     this.fit = BoxFit.contain,
     this.color,
-    this.alignment = Alignment.center,
+    this.alignment = Alignment.topCenter,
   }) : super(key: key);
 
   @override
@@ -74,7 +75,7 @@ class MAssetImage extends StatelessWidget {
         height: height,
         fit: fit,
         color: color,
-        alignment: Alignment.topCenter,
+        alignment: alignment,
       ),
     );
   }
@@ -97,7 +98,7 @@ class MLottieImage extends StatelessWidget {
     this.width = 25,
     this.fit = BoxFit.contain,
     this.color,
-    this.alignment = Alignment.center,
+    this.alignment = Alignment.topCenter,
   }) : super(key: key);
 
   @override
@@ -109,7 +110,7 @@ class MLottieImage extends StatelessWidget {
         width: width,
         height: height,
         fit: fit,
-        alignment: Alignment.topCenter,
+        alignment: alignment,
       ),
     );
   }
@@ -132,7 +133,7 @@ class MFileImage extends StatelessWidget {
     this.width = 25,
     this.fit = BoxFit.contain,
     this.color,
-    this.alignment = Alignment.center,
+    this.alignment = Alignment.topCenter,
   }) : super(key: key);
 
   @override
@@ -145,7 +146,7 @@ class MFileImage extends StatelessWidget {
         height: height,
         fit: fit,
         color: color,
-        alignment: Alignment.topCenter,
+        alignment: alignment,
       ),
     );
   }
@@ -159,7 +160,7 @@ class MNetworkImage extends StatelessWidget {
   final Color? color;
   final double borderRadius;
   final bool hideLoader;
-  final AlignmentGeometry alignment;
+  final Alignment alignment;
 
   const MNetworkImage({
     Key? key,
@@ -184,7 +185,7 @@ class MNetworkImage extends StatelessWidget {
           height: height,
           fit: fit,
           color: color,
-          alignment: Alignment.center,
+          alignment: alignment,
           errorWidget: (errorWidget, error, child) {
             return MAssetImage(
               name: Pngs.empty,

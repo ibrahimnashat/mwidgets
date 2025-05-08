@@ -17,7 +17,7 @@ enum ButtonType { outline, filled }
 
 class MBouncingButton extends StatelessWidget {
   final String? title;
-  Color? textColor;
+  Color? textColor, iconColor;
   double? textSize;
   ButtonType buttonType;
   double iconSize;
@@ -27,7 +27,6 @@ class MBouncingButton extends StatelessWidget {
   final String? icon;
   dynamic color;
   final double borderRadius;
-  final bool iconTransparent;
   final Gradient? gradient;
   final TextDirection? textDirection;
   final bool willAnimated;
@@ -52,8 +51,8 @@ class MBouncingButton extends StatelessWidget {
     this.width,
     this.color,
     this.borderRadius = 14.0,
-    this.iconTransparent = false,
     this.bouncing = true,
+    this.iconColor,
     this.icon,
     this.gradient,
     this.willAnimated = false,
@@ -61,14 +60,14 @@ class MBouncingButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    width ??= 430;
+    width ??= double.infinity;
     textColor ??= Coolors.white;
     textSize ??= FoontSize.font17;
     if (gradient == null) color ??= Coolors.primaryColor;
     final widget = Container(
       alignment: Alignment.center,
       width: width,
-      height: height ?? 60,
+      height: height ?? 55.0,
       decoration: BoxDecoration(
         color: buttonType == ButtonType.filled ? color : null,
         borderRadius: BorderRadius.circular(borderRadius),
@@ -84,7 +83,7 @@ class MBouncingButton extends StatelessWidget {
                 if (icon != null)
                   MSvg(
                     name: icon,
-                    color: iconTransparent ? null : textColor,
+                    color: iconColor,
                     height: iconSize,
                     width: iconSize,
                   ).addPadding(end: 10.0),
@@ -98,7 +97,7 @@ class MBouncingButton extends StatelessWidget {
                     weight: weight,
                   ),
               ],
-            ).addPadding(horizontal: 12.0)
+            )
           : null,
     );
     if (bouncing) {
