@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 
 extension OnContext on BuildContext {
@@ -9,6 +11,12 @@ extension OnContext on BuildContext {
 
   double get mHeight {
     return MediaQuery.of(this).size.height;
+  }
+
+  bool get isGestureNavigation {
+    if (Platform.isIOS) return true;
+    final gestureInsets = MediaQuery.of(this).systemGestureInsets;
+    return gestureInsets.left > 0 || gestureInsets.right > 0;
   }
 
   dynamic push(Widget widget) {

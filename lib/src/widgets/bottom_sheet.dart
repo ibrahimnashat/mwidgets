@@ -28,7 +28,7 @@ void showMBottomSheet({
     context: context,
     builder: (context) {
       final body = SafeArea(
-        bottom: false,
+        bottom: !context.isGestureNavigation,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
