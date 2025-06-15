@@ -15,7 +15,7 @@
     },
     {
       "name": "async",
-      "rootUri": "file:///Users/ibrahimnashat/.pub-cache/hosted/pub.dev/async-2.12.0",
+      "rootUri": "file:///Users/ibrahimnashat/.pub-cache/hosted/pub.dev/async-2.13.0",
       "packageUri": "lib/",
       "languageVersion": "3.4"
     },
@@ -117,7 +117,7 @@
     },
     {
       "name": "fake_async",
-      "rootUri": "file:///Users/ibrahimnashat/.pub-cache/hosted/pub.dev/fake_async-1.3.2",
+      "rootUri": "file:///Users/ibrahimnashat/.pub-cache/hosted/pub.dev/fake_async-1.3.3",
       "packageUri": "lib/",
       "languageVersion": "3.3"
     },
@@ -213,13 +213,13 @@
     },
     {
       "name": "intl",
-      "rootUri": "file:///Users/ibrahimnashat/.pub-cache/hosted/pub.dev/intl-0.19.0",
+      "rootUri": "file:///Users/ibrahimnashat/.pub-cache/hosted/pub.dev/intl-0.20.2",
       "packageUri": "lib/",
-      "languageVersion": "3.0"
+      "languageVersion": "3.3"
     },
     {
       "name": "leak_tracker",
-      "rootUri": "file:///Users/ibrahimnashat/.pub-cache/hosted/pub.dev/leak_tracker-10.0.8",
+      "rootUri": "file:///Users/ibrahimnashat/.pub-cache/hosted/pub.dev/leak_tracker-10.0.9",
       "packageUri": "lib/",
       "languageVersion": "3.2"
     },
@@ -501,7 +501,7 @@
     },
     {
       "name": "vm_service",
-      "rootUri": "file:///Users/ibrahimnashat/.pub-cache/hosted/pub.dev/vm_service-14.3.1",
+      "rootUri": "file:///Users/ibrahimnashat/.pub-cache/hosted/pub.dev/vm_service-15.0.0",
       "packageUri": "lib/",
       "languageVersion": "3.3"
     },
@@ -536,10 +536,9 @@
       "languageVersion": "3.0"
     }
   ],
-  "generated": "2025-05-20T14:33:55.596017Z",
   "generator": "pub",
-  "generatorVersion": "3.7.2",
+  "generatorVersion": "3.8.1",
   "flutterRoot": "file:///opt/homebrew/Caskroom/flutter/3.29.3/flutter",
-  "flutterVersion": "3.29.3",
+  "flutterVersion": "3.32.4",
   "pubCache": "file:///Users/ibrahimnashat/.pub-cache"
 }
