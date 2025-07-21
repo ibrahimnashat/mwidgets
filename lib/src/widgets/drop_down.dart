@@ -163,14 +163,16 @@ class _MDropDownState<T> extends State<MDropDown<T>> {
             hint: Row(
               children: [
                 if (widget.prefix != null) widget.prefix!(item),
-                MText(
-                  text: widget.hint,
-                  color: widget.hintColor ?? Coolors.borderColor,
-                  size: widget.textSize,
-                  weight: widget.titleWeight,
-                  style: widget.hintStyle,
-                  align: widget.isCenter ? TextAlign.center : TextAlign.start,
-                ).addPadding(bottom: widget.removeBorder ? 0 : 21.0),
+                Expanded(
+                  child: MText(
+                    text: widget.hint,
+                    color: widget.hintColor ?? Coolors.borderColor,
+                    size: widget.textSize,
+                    weight: widget.titleWeight,
+                    style: widget.hintStyle,
+                    align: widget.isCenter ? TextAlign.center : TextAlign.start,
+                  ).addPadding(bottom: widget.removeBorder ? 0 : 21.0),
+                ),
               ],
             ),
             value: item,
@@ -188,13 +190,15 @@ class _MDropDownState<T> extends State<MDropDown<T>> {
                   return Row(
                     children: [
                       if (widget.prefix != null) widget.prefix!(item),
-                      MText(
-                        style: widget.selectedStyle,
-                        color: widget.selectedItemColor ?? Coolors.black,
-                        size: widget.textSize,
-                        text: widget.itemTitle(item!),
-                        weight: widget.textWeight,
-                      ),
+                      Expanded(
+                        child: MText(
+                          style: widget.selectedStyle,
+                          color: widget.selectedItemColor ?? Coolors.black,
+                          size: widget.textSize,
+                          text: widget.itemTitle(item!),
+                          weight: widget.textWeight,
+                        ),
+                      )
                     ],
                   );
                 }
@@ -210,13 +214,15 @@ class _MDropDownState<T> extends State<MDropDown<T>> {
                     : Row(
                         children: [
                           if (widget.prefix != null) widget.prefix!(item),
-                          MText(
-                            style: widget.optionStyle,
-                            color: widget.textColor ?? Coolors.black,
-                            size: widget.textSize,
-                            text: widget.itemTitle(item),
-                            weight: widget.textWeight,
-                          ),
+                          Expanded(
+                            child: MText(
+                              style: widget.optionStyle,
+                              color: widget.textColor ?? Coolors.black,
+                              size: widget.textSize,
+                              text: widget.itemTitle(item),
+                              weight: widget.textWeight,
+                            ),
+                          )
                         ],
                       ),
               );
