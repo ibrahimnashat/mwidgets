@@ -9,7 +9,7 @@
     },
     {
       "name": "_macros",
-      "rootUri": "file:///opt/homebrew/Caskroom/flutter/3.29.3/flutter/bin/cache/dart-sdk/pkg/_macros",
+      "rootUri": "file:///opt/homebrew/Caskroom/flutter/bin/cache/dart-sdk/pkg/_macros",
       "packageUri": "lib/",
       "languageVersion": "3.5"
     },
@@ -231,7 +231,7 @@
     },
     {
       "name": "flutter",
-      "rootUri": "file:///opt/homebrew/Caskroom/flutter/3.29.3/flutter/packages/flutter",
+      "rootUri": "file:///opt/homebrew/Caskroom/flutter/packages/flutter",
       "packageUri": "lib/",
       "languageVersion": "3.7"
     },
@@ -267,7 +267,7 @@
     },
     {
       "name": "flutter_test",
-      "rootUri": "file:///opt/homebrew/Caskroom/flutter/3.29.3/flutter/packages/flutter_test",
+      "rootUri": "file:///opt/homebrew/Caskroom/flutter/packages/flutter_test",
       "packageUri": "lib/",
       "languageVersion": "3.7"
     },
@@ -561,7 +561,7 @@
     },
     {
       "name": "sky_engine",
-      "rootUri": "file:///opt/homebrew/Caskroom/flutter/3.29.3/flutter/bin/cache/pkg/sky_engine",
+      "rootUri": "file:///opt/homebrew/Caskroom/flutter/bin/cache/pkg/sky_engine",
       "packageUri": "lib/",
       "languageVersion": "3.7"
     },
@@ -772,7 +772,7 @@
   ],
   "generator": "pub",
   "generatorVersion": "3.8.1",
-  "flutterRoot": "file:///opt/homebrew/Caskroom/flutter/3.29.3/flutter",
-  "flutterVersion": "3.32.4",
+  "flutterRoot": "file:///opt/homebrew/Caskroom/flutter",
+  "flutterVersion": "3.32.7",
   "pubCache": "file:///Users/ibrahimnashat/.pub-cache"
 }

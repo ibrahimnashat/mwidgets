@@ -14,7 +14,7 @@ class MRatingItem extends StatelessWidget {
   final Function(double value) onRatingUpdate;
   final EdgeInsetsGeometry? padding;
   final TextStyle? textStyle;
-
+  final Color? color;
   const MRatingItem({
     super.key,
     this.rating = 4.5,
@@ -24,6 +24,7 @@ class MRatingItem extends StatelessWidget {
     this.ignoreGestures = true,
     this.oneStar = true,
     required this.onRatingUpdate,
+    this.color,
   });
 
   @override
@@ -33,7 +34,7 @@ class MRatingItem extends StatelessWidget {
         children: [
           Icon(
             CupertinoIcons.star_fill,
-            color: Coolors.orange,
+            color: color ?? Coolors.orange,
             size: size,
           ).addPadding(end: 3.0),
           Padding(
@@ -41,7 +42,7 @@ class MRatingItem extends StatelessWidget {
             child: MText(
               text: '$rating',
               size: FoontSize.font12,
-              color: Coolors.orange,
+              color: color ?? Coolors.orange,
               weight: FontWeight.w500,
               style: textStyle,
             ),
@@ -60,12 +61,12 @@ class MRatingItem extends StatelessWidget {
       ratingWidget: RatingWidget(
         full: Icon(
           CupertinoIcons.star_fill,
-          color: Coolors.orange,
+          color: color ?? Coolors.orange,
           size: size,
         ),
         half: Icon(
           CupertinoIcons.star_lefthalf_fill,
-          color: Coolors.orange,
+          color: color ?? Coolors.orange,
           size: size,
         ),
         empty: Icon(
