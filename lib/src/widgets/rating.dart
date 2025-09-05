@@ -12,7 +12,7 @@ class MRatingItem extends StatelessWidget {
   final bool ignoreGestures;
   final bool oneStar;
   final Function(double value) onRatingUpdate;
-  final EdgeInsetsGeometry? padding;
+  final EdgeInsetsGeometry? padding, starPadding;
   final TextStyle? textStyle;
   final Color? color;
   const MRatingItem({
@@ -25,6 +25,7 @@ class MRatingItem extends StatelessWidget {
     this.oneStar = true,
     required this.onRatingUpdate,
     this.color,
+    this.starPadding,
   });
 
   @override
@@ -57,7 +58,7 @@ class MRatingItem extends StatelessWidget {
       initialRating: rating,
       itemSize: size,
       allowHalfRating: true,
-      itemPadding: const EdgeInsetsDirectional.only(start: 2.0),
+      itemPadding: starPadding ?? const EdgeInsetsDirectional.only(start: 2.0),
       ratingWidget: RatingWidget(
         full: Icon(
           CupertinoIcons.star_fill,
