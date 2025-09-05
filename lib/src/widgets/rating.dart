@@ -15,6 +15,7 @@ class MRatingItem extends StatelessWidget {
   final EdgeInsetsGeometry? padding, starPadding;
   final TextStyle? textStyle;
   final Color? color;
+  final IconData filledIcon, emptyIcon, halfIcon;
   const MRatingItem({
     super.key,
     this.rating = 4.5,
@@ -26,6 +27,9 @@ class MRatingItem extends StatelessWidget {
     required this.onRatingUpdate,
     this.color,
     this.starPadding,
+    this.filledIcon = CupertinoIcons.star_fill,
+    this.emptyIcon = CupertinoIcons.star_fill,
+    this.halfIcon = CupertinoIcons.star_lefthalf_fill,
   });
 
   @override
@@ -34,7 +38,7 @@ class MRatingItem extends StatelessWidget {
       return Row(
         children: [
           Icon(
-            CupertinoIcons.star_fill,
+            filledIcon,
             color: color ?? Coolors.orange,
             size: size,
           ).addPadding(end: 3.0),
@@ -61,17 +65,17 @@ class MRatingItem extends StatelessWidget {
       itemPadding: starPadding ?? const EdgeInsetsDirectional.only(start: 2.0),
       ratingWidget: RatingWidget(
         full: Icon(
-          CupertinoIcons.star_fill,
+          filledIcon,
           color: color ?? Coolors.orange,
           size: size,
         ),
         half: Icon(
-          CupertinoIcons.star_lefthalf_fill,
+          halfIcon,
           color: color ?? Coolors.orange,
           size: size,
         ),
         empty: Icon(
-          CupertinoIcons.star_fill,
+          emptyIcon,
           color: Coolors.grey,
           size: size,
         ),
