@@ -76,7 +76,7 @@ class MRatingItem extends StatelessWidget {
         ),
         empty: Icon(
           emptyIcon,
-          color: Coolors.grey,
+          color: color ?? Coolors.grey,
           size: size,
         ),
       ),
