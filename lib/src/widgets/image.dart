@@ -161,6 +161,7 @@ class MNetworkImage extends StatelessWidget {
   final double borderRadius;
   final bool hideLoader;
   final Alignment alignment;
+  final String? placeholder;
 
   const MNetworkImage({
     Key? key,
@@ -172,6 +173,7 @@ class MNetworkImage extends StatelessWidget {
     this.hideLoader = false,
     this.color,
     this.alignment = Alignment.center,
+    this.placeholder,
   }) : super(key: key);
 
   @override
@@ -209,7 +211,7 @@ class MNetworkImage extends StatelessWidget {
       );
     } else {
       return MAssetImage(
-        name: Pngs.empty,
+        name: placeholder ?? Pngs.empty,
         width: width,
         height: height,
         fit: fit,
