@@ -190,7 +190,7 @@ class MNetworkImage extends StatelessWidget {
           alignment: alignment,
           errorWidget: (errorWidget, error, child) {
             return MAssetImage(
-              name: Pngs.empty,
+              name: placeholder ?? Pngs.empty,
               width: width,
               height: height,
               fit: fit,

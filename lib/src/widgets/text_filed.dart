@@ -36,6 +36,7 @@ class MTextFiled extends StatelessWidget {
   final String? Function(String? valid)? validator;
   final void Function(PointerDownEvent data)? onTapOutside;
   final Function? onTap;
+  final bool showRequired;
 
   MTextFiled({
     super.key,
@@ -60,6 +61,7 @@ class MTextFiled extends StatelessWidget {
     this.border,
     this.titlePadding,
     this.maxLength,
+    this.showRequired = false,
     this.fillColor,
     this.lableText,
     this.suffix,
@@ -106,12 +108,25 @@ class MTextFiled extends StatelessWidget {
         if (title != null)
           Padding(
             padding: titlePadding ?? const MPadding.set(bottom: 16.0),
-            child: MText(
-              text: title,
-              size: titleSize,
-              weight: titleWeight ?? FontWeight.w400,
-              color: titleColor,
-              style: titleStyle,
+            child: Row(
+              spacing: 2.0,
+              children: [
+                MText(
+                  text: title,
+                  size: titleSize,
+                  weight: titleWeight ?? FontWeight.w400,
+                  color: titleColor,
+                  style: titleStyle,
+                ),
+                if (showRequired)
+                  MText(
+                    text: '*',
+                    size: titleSize,
+                    weight: titleWeight ?? FontWeight.w400,
+                    color: Colors.red,
+                    style: titleStyle,
+                  ),
+              ],
             ),
           ),
         Row(
