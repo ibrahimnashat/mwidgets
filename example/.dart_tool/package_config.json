@@ -183,9 +183,9 @@
     },
     {
       "name": "flutter_svg",
-      "rootUri": "file:///Users/ibrahimnashat/.pub-cache/hosted/pub.dev/flutter_svg-2.2.2",
+      "rootUri": "file:///Users/ibrahimnashat/.pub-cache/hosted/pub.dev/flutter_svg-2.2.3",
       "packageUri": "lib/",
-      "languageVersion": "3.7"
+      "languageVersion": "3.8"
     },
     {
       "name": "flutter_test",
@@ -195,7 +195,7 @@
     },
     {
       "name": "http",
-      "rootUri": "file:///Users/ibrahimnashat/.pub-cache/hosted/pub.dev/http-1.5.0",
+      "rootUri": "file:///Users/ibrahimnashat/.pub-cache/hosted/pub.dev/http-1.6.0",
       "packageUri": "lib/",
       "languageVersion": "3.4"
     },
@@ -267,9 +267,9 @@
     },
     {
       "name": "meta",
-      "rootUri": "file:///Users/ibrahimnashat/.pub-cache/hosted/pub.dev/meta-1.16.0",
+      "rootUri": "file:///Users/ibrahimnashat/.pub-cache/hosted/pub.dev/meta-1.17.0",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "3.5"
     },
     {
       "name": "mwidgets",
@@ -309,13 +309,13 @@
     },
     {
       "name": "path_provider_android",
-      "rootUri": "file:///Users/ibrahimnashat/.pub-cache/hosted/pub.dev/path_provider_android-2.2.20",
+      "rootUri": "file:///Users/ibrahimnashat/.pub-cache/hosted/pub.dev/path_provider_android-2.2.22",
       "packageUri": "lib/",
       "languageVersion": "3.9"
     },
     {
       "name": "path_provider_foundation",
-      "rootUri": "file:///Users/ibrahimnashat/.pub-cache/hosted/pub.dev/path_provider_foundation-2.4.3",
+      "rootUri": "file:///Users/ibrahimnashat/.pub-cache/hosted/pub.dev/path_provider_foundation-2.5.1",
       "packageUri": "lib/",
       "languageVersion": "3.9"
     },
@@ -465,7 +465,7 @@
     },
     {
       "name": "test_api",
-      "rootUri": "file:///Users/ibrahimnashat/.pub-cache/hosted/pub.dev/test_api-0.7.6",
+      "rootUri": "file:///Users/ibrahimnashat/.pub-cache/hosted/pub.dev/test_api-0.7.7",
       "packageUri": "lib/",
       "languageVersion": "3.5"
     },
@@ -543,8 +543,8 @@
     }
   ],
   "generator": "pub",
-  "generatorVersion": "3.9.2",
+  "generatorVersion": "3.10.0",
   "flutterRoot": "file:///opt/homebrew/Caskroom/flutter",
-  "flutterVersion": "3.35.7",
+  "flutterVersion": "3.38.2",
   "pubCache": "file:///Users/ibrahimnashat/.pub-cache"
 }

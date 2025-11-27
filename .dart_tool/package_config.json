@@ -3,13 +3,13 @@
   "packages": [
     {
       "name": "_fe_analyzer_shared",
-      "rootUri": "file:///Users/ibrahimnashat/.pub-cache/hosted/pub.dev/_fe_analyzer_shared-91.0.0",
+      "rootUri": "file:///Users/ibrahimnashat/.pub-cache/hosted/pub.dev/_fe_analyzer_shared-92.0.0",
       "packageUri": "lib/",
       "languageVersion": "3.9"
     },
     {
       "name": "analyzer",
-      "rootUri": "file:///Users/ibrahimnashat/.pub-cache/hosted/pub.dev/analyzer-8.4.1",
+      "rootUri": "file:///Users/ibrahimnashat/.pub-cache/hosted/pub.dev/analyzer-9.0.0",
       "packageUri": "lib/",
       "languageVersion": "3.9"
     },
@@ -57,7 +57,7 @@
     },
     {
       "name": "build",
-      "rootUri": "file:///Users/ibrahimnashat/.pub-cache/hosted/pub.dev/build-4.0.2",
+      "rootUri": "file:///Users/ibrahimnashat/.pub-cache/hosted/pub.dev/build-4.0.3",
       "packageUri": "lib/",
       "languageVersion": "3.7"
     },
@@ -69,13 +69,13 @@
     },
     {
       "name": "build_daemon",
-      "rootUri": "file:///Users/ibrahimnashat/.pub-cache/hosted/pub.dev/build_daemon-4.1.0",
+      "rootUri": "file:///Users/ibrahimnashat/.pub-cache/hosted/pub.dev/build_daemon-4.1.1",
       "packageUri": "lib/",
       "languageVersion": "3.7"
     },
     {
       "name": "build_runner",
-      "rootUri": "file:///Users/ibrahimnashat/.pub-cache/hosted/pub.dev/build_runner-2.10.1",
+      "rootUri": "file:///Users/ibrahimnashat/.pub-cache/hosted/pub.dev/build_runner-2.10.4",
       "packageUri": "lib/",
       "languageVersion": "3.7"
     },
@@ -87,7 +87,7 @@
     },
     {
       "name": "built_value",
-      "rootUri": "file:///Users/ibrahimnashat/.pub-cache/hosted/pub.dev/built_value-8.12.0",
+      "rootUri": "file:///Users/ibrahimnashat/.pub-cache/hosted/pub.dev/built_value-8.12.1",
       "packageUri": "lib/",
       "languageVersion": "3.0"
     },
@@ -159,9 +159,9 @@
     },
     {
       "name": "dart_style",
-      "rootUri": "file:///Users/ibrahimnashat/.pub-cache/hosted/pub.dev/dart_style-3.1.2",
+      "rootUri": "file:///Users/ibrahimnashat/.pub-cache/hosted/pub.dev/dart_style-3.1.3",
       "packageUri": "lib/",
-      "languageVersion": "3.7"
+      "languageVersion": "3.9"
     },
     {
       "name": "easy_image_viewer",
@@ -243,9 +243,9 @@
     },
     {
       "name": "flutter_svg",
-      "rootUri": "file:///Users/ibrahimnashat/.pub-cache/hosted/pub.dev/flutter_svg-2.2.2",
+      "rootUri": "file:///Users/ibrahimnashat/.pub-cache/hosted/pub.dev/flutter_svg-2.2.3",
       "packageUri": "lib/",
-      "languageVersion": "3.7"
+      "languageVersion": "3.8"
     },
     {
       "name": "flutter_test",
@@ -267,7 +267,7 @@
     },
     {
       "name": "http",
-      "rootUri": "file:///Users/ibrahimnashat/.pub-cache/hosted/pub.dev/http-1.5.0",
+      "rootUri": "file:///Users/ibrahimnashat/.pub-cache/hosted/pub.dev/http-1.6.0",
       "packageUri": "lib/",
       "languageVersion": "3.4"
     },
@@ -309,9 +309,9 @@
     },
     {
       "name": "json_serializable",
-      "rootUri": "file:///Users/ibrahimnashat/.pub-cache/hosted/pub.dev/json_serializable-6.11.1",
+      "rootUri": "file:///Users/ibrahimnashat/.pub-cache/hosted/pub.dev/json_serializable-6.11.3",
       "packageUri": "lib/",
-      "languageVersion": "3.8"
+      "languageVersion": "3.9"
     },
     {
       "name": "leak_tracker",
@@ -369,9 +369,9 @@
     },
     {
       "name": "meta",
-      "rootUri": "file:///Users/ibrahimnashat/.pub-cache/hosted/pub.dev/meta-1.16.0",
+      "rootUri": "file:///Users/ibrahimnashat/.pub-cache/hosted/pub.dev/meta-1.17.0",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "3.5"
     },
     {
       "name": "mime",
@@ -417,13 +417,13 @@
     },
     {
       "name": "path_provider_android",
-      "rootUri": "file:///Users/ibrahimnashat/.pub-cache/hosted/pub.dev/path_provider_android-2.2.20",
+      "rootUri": "file:///Users/ibrahimnashat/.pub-cache/hosted/pub.dev/path_provider_android-2.2.22",
       "packageUri": "lib/",
       "languageVersion": "3.9"
     },
     {
       "name": "path_provider_foundation",
-      "rootUri": "file:///Users/ibrahimnashat/.pub-cache/hosted/pub.dev/path_provider_foundation-2.4.3",
+      "rootUri": "file:///Users/ibrahimnashat/.pub-cache/hosted/pub.dev/path_provider_foundation-2.5.1",
       "packageUri": "lib/",
       "languageVersion": "3.9"
     },
@@ -452,8 +452,8 @@
       "languageVersion": "3.8"
     },
     {
-      "name": "phone_number",
-      "rootUri": "file:///Users/ibrahimnashat/.pub-cache/hosted/pub.dev/phone_number-2.1.0",
+      "name": "phone_numbers_parser",
+      "rootUri": "file:///Users/ibrahimnashat/.pub-cache/hosted/pub.dev/phone_numbers_parser-9.0.16",
       "packageUri": "lib/",
       "languageVersion": "3.0"
     },
@@ -531,15 +531,15 @@
     },
     {
       "name": "source_gen",
-      "rootUri": "file:///Users/ibrahimnashat/.pub-cache/hosted/pub.dev/source_gen-4.0.2",
+      "rootUri": "file:///Users/ibrahimnashat/.pub-cache/hosted/pub.dev/source_gen-4.1.1",
       "packageUri": "lib/",
       "languageVersion": "3.7"
     },
     {
       "name": "source_helper",
-      "rootUri": "file:///Users/ibrahimnashat/.pub-cache/hosted/pub.dev/source_helper-1.3.8",
+      "rootUri": "file:///Users/ibrahimnashat/.pub-cache/hosted/pub.dev/source_helper-1.3.9",
       "packageUri": "lib/",
-      "languageVersion": "3.7"
+      "languageVersion": "3.9"
     },
     {
       "name": "source_span",
@@ -621,7 +621,7 @@
     },
     {
       "name": "test_api",
-      "rootUri": "file:///Users/ibrahimnashat/.pub-cache/hosted/pub.dev/test_api-0.7.6",
+      "rootUri": "file:///Users/ibrahimnashat/.pub-cache/hosted/pub.dev/test_api-0.7.7",
       "packageUri": "lib/",
       "languageVersion": "3.5"
     },
@@ -723,8 +723,8 @@
     }
   ],
   "generator": "pub",
-  "generatorVersion": "3.9.2",
+  "generatorVersion": "3.10.0",
   "flutterRoot": "file:///opt/homebrew/Caskroom/flutter",
-  "flutterVersion": "3.35.7",
+  "flutterVersion": "3.38.2",
   "pubCache": "file:///Users/ibrahimnashat/.pub-cache"
 }

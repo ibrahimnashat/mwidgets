@@ -1,26 +1,28 @@
 import 'dart:async';
 
-import 'package:phone_number/phone_number.dart';
+import 'package:phone_numbers_parser/phone_numbers_parser.dart';
 
 class PhoneValidator {
   final StreamController<bool> validate;
 
   PhoneValidator(this.validate);
 
-  String countryCode = 'EG';
+  IsoCode countryCode = IsoCode.EG;
 
-  void serCountryCode(value) {
-    countryCode = value;
+  void setCountryCode(String value) {
+    final index = IsoCode.values.indexWhere((e) => e.name == value);
+    if (index != -1) {
+      countryCode = IsoCode.values[index];
+    }
   }
 
   Future<PhoneNumber?> getPhone({required String phone}) async {
     try {
-      PhoneNumber phoneNumber = await PhoneNumberUtil().parse(
+      PhoneNumber phoneNumber = PhoneNumber.parse(
         phone,
-        regionCode: countryCode,
+        callerCountry: countryCode,
       );
-      if (phoneNumber.e164 == '' ||
-          phoneNumber.type != PhoneNumberType.MOBILE) {
+      if (!phoneNumber.isValid(type: PhoneNumberType.mobile)) {
         validate.sink.add(false);
         return null;
       }
