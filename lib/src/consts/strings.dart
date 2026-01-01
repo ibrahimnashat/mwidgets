@@ -3,30 +3,33 @@ import 'package:flutter/material.dart';
 import 'date_time.dart';
 
 extension OnString on String {
-  String get toDateOnly => DateTime.tryParse(this)?.toLocal().dateOnly ?? '';
+  String toDateOnly(BuildContext context) =>
+      DateTime.tryParse(this)?.toLocal().dateOnly(context) ?? '';
 
-  String get toTimeAndDate =>
-      DateTime.tryParse(this)?.toLocal().timeAndDate ?? '';
+  String toTimeAndDate(BuildContext context) =>
+      DateTime.tryParse(this)?.toLocal().timeAndDate(context) ?? '';
 
-  String get toNameOfDayAndMonthAndYear =>
-      DateTime.tryParse(this)?.toLocal().nameOfDayAndMonthAndYear ?? '';
+  String toNameOfDayAndMonthAndYear(BuildContext context) =>
+      DateTime.tryParse(this)?.toLocal().nameOfDayAndMonthAndYear(context) ??
+      '';
 
-  String get toDateAndTime =>
-      DateTime.tryParse(this)?.toLocal().nameOfDayAndMonth ?? '';
+  String toDateAndTime(BuildContext context) =>
+      DateTime.tryParse(this)?.toLocal().nameOfDayAndMonth(context) ?? '';
 
-  String get toNameOfMonthAndTime =>
-      DateTime.tryParse(this)?.toLocal().nameOfMonthAndTime ?? '';
+  String toNameOfMonthAndTime(BuildContext context) =>
+      DateTime.tryParse(this)?.toLocal().nameOfMonthAndTime(context) ?? '';
 
   String ago(BuildContext context) =>
       DateTime.parse(this).toLocal().timeAgo(context);
 
-  String get toTimeOnly => DateTime.tryParse(this)?.toLocal().time12Only ?? '';
+  String toTimeOnly(BuildContext context) =>
+      DateTime.tryParse(this)?.toLocal().time12Only(context) ?? '';
 
-  String get toMonthAndDay =>
-      DateTime.tryParse(this)?.toLocal().monthAndDay ?? '';
+  String toMonthAndDay(BuildContext context) =>
+      DateTime.tryParse(this)?.toLocal().monthAndDay(context) ?? '';
 
-  String get toYearMonthDay =>
-      DateTime.tryParse(this)?.toLocal().birthDateForm ?? '';
+  String toYearMonthDay(BuildContext context) =>
+      DateTime.tryParse(this)?.toLocal().birthDateForm(context) ?? '';
 }
 
 extension OnNullString on String? {

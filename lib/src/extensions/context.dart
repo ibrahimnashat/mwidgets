@@ -95,6 +95,8 @@ extension OnContext on BuildContext {
 
   bool get isAr => Localizations.localeOf(this).languageCode == 'ar';
 
+  String get languageCode => Localizations.localeOf(this).languageCode;
+
   String get lng => Localizations.localeOf(this).languageCode;
 }
 
