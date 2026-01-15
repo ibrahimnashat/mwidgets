@@ -31,16 +31,26 @@ extension OnDateTime on DateTime {
   String get birthDateForm =>
       DateFormat('dd/MM/yyyy', MWidgetsSetUp.isAr ? 'ar' : 'en').format(this);
 
-  String get nameOfDayAndMonth =>
-      DateFormat('EEEE, MMM dd', MWidgetsSetUp.isAr ? 'ar' : 'en').format(this);
+  String get nameOfDayAndMonth {
+    if (MWidgetsSetUp.isAr) {
+      return DateFormat('EEEE,dd, MMM', 'ar').format(this);
+    }
+    return DateFormat('EEEE, MMM dd', 'en').format(this);
+  }
 
-  String get nameOfDayAndMonthAndYear =>
-      DateFormat('EEEE, MMM dd yyyy', MWidgetsSetUp.isAr ? 'ar' : 'en')
-          .format(this);
+  String get nameOfDayAndMonthAndYear {
+    if (MWidgetsSetUp.isAr) {
+      return DateFormat('EEEE,dd, MMM yyyy', 'ar').format(this);
+    }
+    return DateFormat('EEEE, MMM dd yyyy', 'en').format(this);
+  }
 
-  String get nameOfMonthAndTime =>
-      DateFormat('MMM dd hh:mm a', MWidgetsSetUp.isAr ? 'ar' : 'en')
-          .format(this);
+  String get nameOfMonthAndTime {
+    if (MWidgetsSetUp.isAr) {
+      return DateFormat('MMM dd hh:mm a', 'ar').format(this);
+    }
+    return DateFormat('MMM dd hh:mm a', 'en').format(this);
+  }
 
   int get timeStamp => millisecondsSinceEpoch;
 
