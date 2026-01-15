@@ -2,7 +2,7 @@ name: mwidgets
 description:
   Contains a custom widgets like MText, MDropdown, MFileImage, MNetworkImage, MLottie, MSvg,
   MBouncingButton others
-version: 1.3.2
+version: 1.3.4
 homepage: https://github.com/ibrahimnashat/mwidgets.git
 
 environment:

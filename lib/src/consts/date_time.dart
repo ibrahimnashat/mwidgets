@@ -3,41 +3,44 @@ import 'package:intl/intl.dart';
 import 'package:mwidgets/mwidgets.dart';
 
 extension OnDateTime on DateTime {
-  String time12Only(BuildContext context) =>
-      DateFormat('hh:mm a', context.languageCode).format(this);
+  String get time12Only =>
+      DateFormat('hh:mm a', MWidgetsSetUp.isAr ? 'ar' : 'en').format(this);
 
-  String time24Only(BuildContext context) =>
-      DateFormat('HH:mm', context.languageCode).format(this);
+  String get time24Only =>
+      DateFormat('HH:mm', MWidgetsSetUp.isAr ? 'ar' : 'en').format(this);
 
-  String currentHour(BuildContext context) =>
-      DateFormat('hh', context.languageCode).format(this);
+  String get currentHour =>
+      DateFormat('hh', MWidgetsSetUp.isAr ? 'ar' : 'en').format(this);
 
-  String dateOnly(BuildContext context) =>
-      DateFormat('yyyy-MM-dd', context.languageCode).format(this);
+  String get dateOnly => DateFormat('yyyy-MM-dd').format(this);
 
-  String timeAndDate(BuildContext context) =>
-      DateFormat('yyyy-MM-dd hh:mm a', context.languageCode).format(this);
+  String get timeAndDate =>
+      DateFormat('yyyy-MM-dd hh:mm a', MWidgetsSetUp.isAr ? 'ar' : 'en')
+          .format(this);
 
-  String current(BuildContext context) =>
-      DateFormat('yyyy-MM-dd hh:mm s', context.languageCode).format(this);
+  String get current =>
+      DateFormat('yyyy-MM-dd hh:mm s', MWidgetsSetUp.isAr ? 'ar' : 'en')
+          .format(this);
 
-  String monthAndDay(BuildContext context) =>
-      DateFormat('dd MMM', context.languageCode).format(this);
+  String get monthAndDay =>
+      DateFormat('dd MMM', MWidgetsSetUp.isAr ? 'ar' : 'en').format(this);
 
-  String yearMonthDay(BuildContext context) =>
-      DateFormat('dd MMM yyyy', context.languageCode).format(this);
+  String get yearMonthDay =>
+      DateFormat('dd MMM yyyy', MWidgetsSetUp.isAr ? 'ar' : 'en').format(this);
 
-  String birthDateForm(BuildContext context) =>
-      DateFormat('dd/MM/yyyy', context.languageCode).format(this);
+  String get birthDateForm =>
+      DateFormat('dd/MM/yyyy', MWidgetsSetUp.isAr ? 'ar' : 'en').format(this);
 
-  String nameOfDayAndMonth(BuildContext context) =>
-      DateFormat('EEEE, MMM dd', context.languageCode).format(this);
+  String get nameOfDayAndMonth =>
+      DateFormat('EEEE, MMM dd', MWidgetsSetUp.isAr ? 'ar' : 'en').format(this);
 
-  String nameOfDayAndMonthAndYear(BuildContext context) =>
-      DateFormat('EEEE, MMM dd yyyy', context.languageCode).format(this);
+  String get nameOfDayAndMonthAndYear =>
+      DateFormat('EEEE, MMM dd yyyy', MWidgetsSetUp.isAr ? 'ar' : 'en')
+          .format(this);
 
-  String nameOfMonthAndTime(BuildContext context) =>
-      DateFormat('MMM dd hh:mm a', context.languageCode).format(this);
+  String get nameOfMonthAndTime =>
+      DateFormat('MMM dd hh:mm a', MWidgetsSetUp.isAr ? 'ar' : 'en')
+          .format(this);
 
   int get timeStamp => millisecondsSinceEpoch;
 
