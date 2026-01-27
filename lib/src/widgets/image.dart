@@ -162,9 +162,10 @@ class MNetworkImage extends StatelessWidget {
   final bool hideLoader;
   final Alignment alignment;
   final String? placeholder;
+  final Widget? placeholderWidget;
 
   const MNetworkImage({
-    Key? key,
+    super.key,
     this.borderRadius = 0,
     this.url = "",
     this.height = 25,
@@ -174,7 +175,8 @@ class MNetworkImage extends StatelessWidget {
     this.color,
     this.alignment = Alignment.center,
     this.placeholder,
-  }) : super(key: key);
+    this.placeholderWidget,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -189,6 +191,9 @@ class MNetworkImage extends StatelessWidget {
           color: color,
           alignment: alignment,
           errorWidget: (errorWidget, error, child) {
+            if (placeholderWidget != null) {
+              return placeholderWidget!;
+            }
             return MAssetImage(
               name: placeholder ?? Pngs.empty,
               width: width,
@@ -210,6 +215,9 @@ class MNetworkImage extends StatelessWidget {
         ),
       );
     } else {
+      if (placeholderWidget != null) {
+        return placeholderWidget!;
+      }
       return MAssetImage(
         name: placeholder ?? Pngs.empty,
         width: width,
