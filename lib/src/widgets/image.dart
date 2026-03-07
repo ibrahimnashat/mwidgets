@@ -18,9 +18,10 @@ class MSvg extends StatelessWidget {
   final Color? color;
   final Key? mkey;
   final AlignmentGeometry alignment;
+  final ColorMapper? colorMapper;
 
   const MSvg({
-    Key? key,
+    super.key,
     this.mkey,
     this.name,
     this.path,
@@ -29,7 +30,8 @@ class MSvg extends StatelessWidget {
     this.fit = BoxFit.contain,
     this.color,
     this.alignment = Alignment.center,
-  }) : super(key: key);
+    this.colorMapper,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -41,6 +43,7 @@ class MSvg extends StatelessWidget {
       color: color,
       key: mkey,
       alignment: alignment,
+      colorMapper: colorMapper,
     );
   }
 }
@@ -55,7 +58,7 @@ class MAssetImage extends StatelessWidget {
   final AlignmentGeometry alignment;
 
   const MAssetImage({
-    Key? key,
+    super.key,
     this.borderRadius = 0,
     this.name,
     this.height = 25,
@@ -63,7 +66,7 @@ class MAssetImage extends StatelessWidget {
     this.fit = BoxFit.contain,
     this.color,
     this.alignment = Alignment.topCenter,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -91,7 +94,7 @@ class MLottieImage extends StatelessWidget {
   final AlignmentGeometry alignment;
 
   const MLottieImage({
-    Key? key,
+    super.key,
     this.borderRadius = 0,
     this.name,
     this.height = 25,
@@ -99,7 +102,7 @@ class MLottieImage extends StatelessWidget {
     this.fit = BoxFit.contain,
     this.color,
     this.alignment = Alignment.topCenter,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -126,7 +129,7 @@ class MFileImage extends StatelessWidget {
   final AlignmentGeometry alignment;
 
   const MFileImage({
-    Key? key,
+    super.key,
     this.borderRadius = 0,
     required this.file,
     this.height = 25,
@@ -134,7 +137,7 @@ class MFileImage extends StatelessWidget {
     this.fit = BoxFit.contain,
     this.color,
     this.alignment = Alignment.topCenter,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
